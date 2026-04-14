@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Pablo Correa | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Full-screen project modal -->
+    <div id="modal-overlay" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button id="close-modal" class="close-modal">&times;</button>
+            <div class="modal-overview">
+                <h2 id="modal-title" style="margin-bottom:0.5rem;">Title</h2>
+                <span id="modal-tag" class="project-tag" style="margin-bottom:1rem;">Tag</span>
+                <p id="modal-desc">Overview will go here...</p>
+            </div>
+            <!-- Large elongated Figma image -->
+            <img id="modal-img" class="modal-figma-img" src="" alt="Project Presentation">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <!-- Clicking Logo returns to home top -->
+            <a href="#home">
+                <img src="assets/JPC_logo.png" alt="JPC" class="nav-logo" onerror="this.outerHTML='<span style=\'font-size:1.5rem;font-weight:800;color:var(--accent);\'>JPC</span>'">
+            </a>
+        </div>
+
+        <!-- Hamburger Icon -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="var(--text-primary)"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+            <a href="#home" class="nav-item" data-i18n="nav_home">Home</a>
+            <a href="#projects" class="nav-item" data-i18n="nav_projects">Projects</a>
+            <a href="#about" class="nav-item" data-i18n="nav_about">About Me</a>
+            <a href="#contact" class="nav-item" data-i18n="nav_contact">Contact</a>
+            <button id="lang-toggle" class="lang-btn nav-item">EN / ES</button>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section con Doble Imagen de Fondo superpuestas -->
+    <header id="home" class="hero section">
+        
+        <div class="hero-hover-container">
+            <div class="hero-hover-img img-left" style="background-image: url('assets/hover1.png');"></div>
+            <div class="hero-hover-img img-right" style="background-image: url('assets/hover2.png');"></div>
+        </div>
+        
+        <div class="hero-inner-wrapper">
+            <div class="hero-content">
+                <h1 data-i18n="hero_greeting">Hi, I'm <span class="highlight">Jose Pablo Correa</span></h1>
+                <h3 data-i18n="hero_subtitle">Industrial Designer & UI/UX Designer</h3>
+                <p data-i18n="hero_desc">Industrial designer living in Medellin, Colombia. I specialize in creating intuitive, effective, and accessible user experiences.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary" data-i18n="btn_projects">View My Projects</a>
+                    <a href="https://www.behance.net/josepablocorrea" target="_blank" class="btn btn-secondary">Behance</a>
+                </div>
+            </div>
+            <!-- Reclutador Profile Picture on right side of Hero -->
+            <div class="hero-aside-profile">
+                <!-- Usamos perfil en JPG tal y como solicitaste -->
+                <img src="assets/profile_pic.jpg" alt="Jose Pablo Correa" class="hero-profile-pic" onerror="this.src='https://via.placeholder.com/250/0b0716/8b5cf6?text=Profile+Pic'">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2 class="section-title reveal-on-scroll" data-i18n="nav_projects">Projects</h2>
+            
+            <div class="project-filters reveal-on-scroll">
+                <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All</button>
+                <button class="filter-btn" data-filter="ui">UI/UX</button>
+                <button class="filter-btn" data-filter="industrial" data-i18n="filter_ind">Industrial Design</button>
+                <button class="filter-btn" data-filter="logo">Logos</button>
+            </div>
+
+            <div class="projects-grid" id="projects-grid">
+                <!-- Injected via JS -->
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section">
+            <h2 class="section-title reveal-on-scroll" data-i18n="nav_about">About Me</h2>
+            <div class="about-grid">
+                <div class="about-content reveal-on-scroll">
+                    <h3 data-i18n="about_title">My background</h3>
+                    <p data-i18n="about_text">With a strong background in industrial and product design from Universidad de San Buenaventura Medellín, I specialize in creating intuitive, effective, and accessible user experiences. As a UI designer, I apply my UX expertise and advanced knowledge of Sketch App and Figma to develop innovative interfaces that improve user interaction, satisfaction, and trust.</p>
+                    
+                    <div class="my-passions text-center">
+                        <h4 data-i18n="work_title">I WORK</h4>
+                        <p data-i18n="work_desc">I delve into design, technology, and innovation.</p>
+                        
+                        <h4 data-i18n="venture_title">I VENTURE</h4>
+                        <p data-i18n="venture_desc">Venturing into new horizons fuels my creativity. I enjoy music, skate, and movies.</p>
+
+                        <h4 data-i18n="dream_title">I DREAM</h4>
+                        <p data-i18n="dream_desc">I aspire to craft designs that inspire and transform. My dream is to collaborate with forward-thinking teams driving change.</p>
+                    </div>
+                </div>
+
+                <div class="about-content reveal-on-scroll">
+                    <h3 data-i18n="timeline_title">Life Timeline</h3>
+                    <div class="about-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">1995</div>
+                            <span class="timeline-date">Hello, World!</span>
+                            <p data-i18n="t1">I was born in Medellin, Colombia.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2013</div>
+                            <span class="timeline-date">High School</span>
+                            <p data-i18n="t2">Finish High School. Hello, adult life.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2018</div>
+                            <span class="timeline-date">United States of America!</span>
+                            <p data-i18n="t3">Relocate to Pennsylvania, USA. Worked as a lifeguard in Hershey park, learning about many cultures.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2020</div>
+                            <span class="timeline-date">Back Home!</span>
+                            <p data-i18n="t4">Move back to Medellin.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2022</div>
+                            <span class="timeline-date">Freelance!</span>
+                            <p data-i18n="t5">Working on independent design projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Progress Animated Horizontal Bars -->
+            <div style="margin-top: 4rem;">
+                <h3 class="text-center reveal-on-scroll" style="color:var(--text-primary); font-weight:800; font-size:2rem;" data-i18n="skills_title">Skills</h3>
+                <div class="skills-container reveal-on-scroll">
+                    
+                    <div class="skill-bar">
+                        <div class="skill-info"><span>Illustrator</span> <span class="skill-percent">95%</span></div>
+                        <div class="progress-track"><div class="progress-fill" data-width="95%"></div></div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-info"><span>Solid Works</span> <span class="skill-percent">85%</span></div>
+                        <div class="progress-track"><div class="progress-fill" data-width="85%"></div></div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-info"><span>Autodesk Inventor</span> <span class="skill-percent">75%</span></div>
+                        <div class="progress-track"><div class="progress-fill" data-width="75%"></div></div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-info"><span>SketchUp</span> <span class="skill-percent">85%</span></div>
+                        <div class="progress-track"><div class="progress-fill" data-width="85%"></div></div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-info"><span>Figma</span> <span class="skill-percent">95%</span></div>
+                        <div class="progress-track"><div class="progress-fill" data-width="95%"></div></div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-info"><span>English</span> <span class="skill-percent">95%</span></div>
+                        <div class="progress-track"><div class="progress-fill" data-width="95%"></div></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2 class="section-title reveal-on-scroll" data-i18n="nav_contact">Contact</h2>
+            <div class="contact-wrapper">
+                
+                <!-- Circular Profile Image (50% bigger) -->
+                <div class="profile-img-container reveal-on-scroll">
+                    <img src="assets/profile_pic.jpg" alt="Jose Pablo" class="profile-img" onerror="this.src='https://via.placeholder.com/225/0b0716/8b5cf6?text=Profile'">
+                </div>
+
+                <div class="contact-details reveal-on-scroll">
+                    <div class="contact-item">
+                        <h4 data-i18n="city_title">Location</h4>
+                        <p>Tv 5 #75D - 42<br>Medellín, Antioquia, Colombia</p>
+                        <h4 style="margin-top: 1rem;" data-i18n="phone_title">Phone</h4>
+                        <p>+57 320 734 86 84</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4 data-i18n="social_title">Social Networks</h4>
+                        <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 0.8rem; margin-bottom: 1rem;">
+                            <!-- Behance Original Color Icon -->
+                            <a href="https://www.behance.net/josepablocorrea" target="_blank" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" title="Behance Profile">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/behance/behance-original.svg" width="40" height="40" alt="Behance">
+                            </a>
+                            <!-- LinkedIn Original Color Icon -->
+                            <a href="https://www.linkedin.com/in/jose-pablo-correa/" target="_blank" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" title="LinkedIn Profile">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" width="40" height="40" alt="LinkedIn">
+                            </a>
+                        </div>
+                        <a href="mailto:contact@example.com" class="btn btn-primary" data-i18n="btn_email">Send an Email</a>
+                    </div>
+                </div>
+
+                <!-- Map separate below -->
+                <div class="map-container reveal-on-scroll">
+                    <img src="assets/map.png" alt="Location Map" onerror="this.outerHTML='<span style=\'color:var(--text-secondary)\'>Map Image (Place in assets/map.png)</span>'">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Jose Pablo Correa. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
