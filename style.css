@@ -120,7 +120,7 @@ h3 { font-size: 1.5rem; font-weight: 400; color: var(--text-secondary); margin-b
 
 /* Smooth blur turn-off with distinct brightness values */
 .hero-hover-img.img-left:hover {
-    filter: blur(0px) brightness(1.1); /* Brighter for hover1 */
+    filter: blur(0px) brightness(0.7); /* Mid-level brightness for hover1 */
 }
 
 .hero-hover-img.img-right:hover {
