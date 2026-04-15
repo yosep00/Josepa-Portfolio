@@ -94,6 +94,7 @@ h3 { font-size: 1.5rem; font-weight: 400; color: var(--text-secondary); margin-b
     top: 0; left: 0; 
     width: 100%; height: 100%;
     z-index: 0;
+    background: var(--bg-color); /* solid backdrop so darkened images blend smoothly */
 }
 
 .hero-hover-img {
@@ -101,8 +102,8 @@ h3 { font-size: 1.5rem; font-weight: 400; color: var(--text-secondary); margin-b
     top: 0; height: 100%;
     background-size: cover;
     background-position: center;
-    transition: filter 0.8s ease-in-out, z-index 0.3s;
-    filter: blur(8px) brightness(0.7);
+    transition: filter 0.8s ease-in-out;
+    filter: blur(8px) brightness(0.25); /* Replaces overlay darkness, inherently dark */
 }
 
 /* Image 1 overlaps Image 2 by sitting on top with 60% width */
@@ -114,28 +115,16 @@ h3 { font-size: 1.5rem; font-weight: 400; color: var(--text-secondary); margin-b
 
 .hero-hover-img.img-right {
     right: 0; width: 60%;
-    z-index: 1;
-}
-
-/* High opacity overlay to darken both */
-.hero-hover-container::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: var(--bg-color);
-    opacity: 0.85; /* Increased opacity as requested */
-    z-index: 3;
-    pointer-events: none; /* Allows hover events to reach images */
+    z-index: 1; /* Always physically behind image 1 */
 }
 
 /* Smooth blur turn-off with distinct brightness values */
 .hero-hover-img.img-left:hover {
-    filter: blur(0px) brightness(1.1);
+    filter: blur(0px) brightness(1.1); /* Brighter for hover1 */
 }
 
 .hero-hover-img.img-right:hover {
-    filter: blur(2px) brightness(0.15); /* Much darker and slightly blurred for hover2 */
-    z-index: 4; /* Bring to front if right image hovered */
+    filter: blur(2px) brightness(0.15); /* Soft, very dark for hover2, without z-index jumps */
 }
 
 /* Hero Content */
