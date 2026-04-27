@@ -641,7 +641,12 @@ h3 { font-size: 1.5rem; font-weight: 400; color: var(--text-secondary); margin-b
     align-items: center;
     justify-content: center;
 }
-.map-container img { width: 100%; height: 100%; object-fit: cover; }
+.map-container iframe { 
+    width: 100%; 
+    height: 100%; 
+    border: none;
+    display: block;
+}
 
 footer { text-align: center; padding: 2rem; border-top: 1px solid var(--glass-border); color: var(--text-secondary); }
 
