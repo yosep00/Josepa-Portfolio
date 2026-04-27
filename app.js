@@ -32,33 +32,80 @@ const translations = {
         filter_all: "All",
         filter_ind: "Industrial Design",
         projects: [
-            { category: "ui", id: "selist", tag: "UI: Mobile App", title: "SeList Now", 
-              overview: "SetList Now is an app where you can review the setlists of the artists you want, it has 7,021,486 setlists, 318,380 artists, 336,592 venues, 153,090 festivals that you can look on at any time.",
-              imageCover: "assets/covers/selist_cover.png", imageFull: "assets/projects/selist_full.png" },
-            { category: "ui", id: "wooden", tag: "UI: Website - Landing Page", title: "Wooden Note", 
-              overview: "This e-commerce landing page effectively showcases guitars and music accessories, prominently featuring the \"Vintoria II Series\" with a large banner. It guides users through \"Best Sellers\" and a \"Guitars on Sale\" promotion, then expands to \"Accessories\" and \"Featured Brands\" like Fender and Gibson, all supported by clear product displays and calls to action. The footer provides essential navigation and a newsletter signup, creating a comprehensive and user-friendly online shopping experience for musicians.",
-              imageCover: "assets/covers/wooden_cover.png", imageFull: "assets/projects/wooden_full.png" },
-            { category: "ui", id: "gamify", tag: "UI: Mobile App", title: "Gamify Task", 
-              overview: "This page provides an overview of \"GAMIFIED TASK,\" a task organization app designed to streamline daily life. It details the intuitive sign-in process, offering options for various user types (personal, work, professional) to customize their experience. The app's interface is highlighted, showcasing features like task viewing, different organization methods, and a step-by-step guide for new users. It also demonstrates how to efficiently add new tasks with options for priority and reminders, emphasizing its gamified approach to productivity.",
-              imageCover: "assets/covers/gamify_cover.png", imageFull: "assets/projects/gamify_full.png" },
-            { category: "industrial", id: "apartment", tag: "Interior & Industrial Design", title: "Apartment", 
-              overview: "This apartment features a modern, open-concept design with a harmonious blend of natural wood textures and clean white surfaces. The kitchen boasts light wood cabinetry, a grey stone countertop with an integrated stove, and a breakfast bar with bar stools, flowing seamlessly into the living area furnished with a comfortable sectional sofa and dark rug. The bedroom emphasizes warmth with a dark wood headboard, subtle lighting, and a neutral color palette for bedding. Practical storage solutions are integrated throughout, including a sleek floating media console in the living space and a well-organized closet with mirrored doors and ample shelving. The bathroom continues the modern aesthetic with a floating wood vanity, white sink, and minimalist fixtures. Overall, the apartment combines functionality with a sophisticated, contemporary style.",
-              imageCover: "assets/covers/apartment_cover.png", imageFull: "assets/projects/apartment_full.png" },
-            { category: "ui", id: "harmoni", tag: "Mobile - Desktop App", title: "harmoniGroove", 
-              overview: "This page details \"HarmoniGroove,\" a music store app, showcasing both its web platform and mobile application design. It highlights the mobile app's home screen with various content categories, followed by specific screens for individual songs, sharing options, a search function, and playlist management, providing a comprehensive overview of the user experience across different features.",
-              imageCover: "assets/covers/harmoni_cover.png", imageFull: "assets/projects/harmoni_full.png" },
-            { category: "industrial", id: "pizza", tag: "Interior & Industrial Design", title: "Topping Pizza", 
-              overview: "\"Toppings Pizza,\" a bubble/counter-style pizza stand. The design features a modern, industrial-chic aesthetic with a black metal frame, exposed \"PIZZA\" marquee lighting, and string lights for ambiance. The counter combines warm wooden paneling with cool grey stone accents and integrated greenery, creating an inviting contrast. Functionally, it includes a Coca-Cola refrigerator, an oven, a display area for toppings, and a point-of-sale system. An adjacent seating area with built-in wooden benches, cushions, and small tables offers customers a comfortable spot to enjoy their pizza. The stand is designed for efficiency and visual appeal in a compact space, ideal for a food court or outdoor setting.",
-              imageCover: "assets/covers/pizza_cover.png", imageFull: "assets/projects/pizza_full.png" },
-            { category: "industrial", id: "medical", tag: "Interior & Industrial Design", title: "Medical Center", 
-              overview: "This medical office design prioritizes a child-friendly and functional environment, evident in its vibrant color palette and thoughtful layout. The examination room features a comfortable bed with a pull-out paper dispenser, playful multi-colored steps for easy access, and an adjacent sink for hygiene. The office space is designed with a wooden desk, a blue accent wall, and colorful patient chairs. The reception area is bright and inviting with a multi-toned desk, ample storage, and a \"Pediatría de Precisión\" logo prominently displayed. A waiting area provides a cozy L-shaped sofa and a bean bag chair, ensuring a welcoming and reassuring atmosphere for young patients and their families.",
-              imageCover: "assets/covers/medical_cover.png", imageFull: "assets/projects/medical_full.png" },
-            { category: "industrial", id: "beillin", tag: "Interior & Industrial Design", title: "Beillin Counter", 
-              overview: "Design proposal for \"BEILLÍN Punto de Información\" by Metal Plus, detailing a modern information counter. The counter features a U-shaped design with a light grey top and rich wooden paneling on the exterior, accented with LED lighting. Key elements include an integrated information desk with a computer, two internal workspaces, and a prominent \"i\" symbol for information, alongside a colorful \"Beillín\" logo. Functionality is emphasized with built-in storage, including soft-close hinged doors and drawers, and a dedicated space for wheelchair storage. The design aims for a professional yet inviting aesthetic, optimized for both staff and visitors.",
-              imageCover: "assets/covers/beillin_cover.png", imageFull: "assets/projects/beillin_full.png" },
-            { category: "ui", id: "tripflow", tag: "UI: Mobile App", title: "Tripflow", 
-              overview: "This app overview details the user research, competitive analysis, and usability testing phases for a travel expense management application. It highlights key features like photo-based receipt logging, clear expense visualizations, and customizable budget alerts, designed for a simple, user-friendly interface. Continuous feedback loops ensured ongoing improvements, addressing user needs for easy tracking and financial management during trips.",
-              imageCover: "assets/covers/tripflow_cover.png", imageFull: "assets/projects/tripflow_full.png" },
+            { 
+                category: "ui", 
+                id: "serez", 
+                tag: "Brand Identity & UI", 
+                title: "Serez Landing", 
+                overview: "Serez Landing is a high-impact project containing a dark editorial landing page, a comprehensive brand style guide, an E-book layout, and a YouTube thumbnail design.", 
+                imageCover: "assets/covers/serez_cover.png", 
+                htmlContent: `
+                    <div class="serez-section">
+                        <h2 class="serez-title">Brand Style Guide</h2>
+                        <p class="serez-desc">A comprehensive manual detailing the dark editorial aesthetic, typography, and visual language of the Serez brand.</p>
+                        <iframe src="serez/style-guide-en.html#serez-iframe-style" id="serez-iframe-style" class="serez-iframe" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                    <div class="serez-section" style="background:#05030a;">
+                        <h2 class="serez-title">Landing Page Design</h2>
+                        <p class="serez-desc">High-converting, non-linear fluid layout with parallax effects designed for the Masterclass.</p>
+                        <iframe src="serez/index-en.html#serez-iframe-landing" id="serez-iframe-landing" class="serez-iframe" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                    <div class="serez-section">
+                        <h2 class="serez-title">Mini E-Book</h2>
+                        <p class="serez-desc">A4 printable PDF layout maintaining full consistency with the established brand manual.</p>
+                        <iframe src="serez/ebook-en.html#serez-iframe-ebook" id="serez-iframe-ebook" class="serez-iframe" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                    <div class="serez-section" style="background:#05030a;">
+                        <h2 class="serez-title">YouTube Thumbnail</h2>
+                        <p class="serez-desc">Engaging and visually striking thumbnail designed to capture attention and reflect the brand's premium feel.</p>
+                        <iframe src="serez/thumbnail-generator-en.html#serez-iframe-thumb" id="serez-iframe-thumb" class="serez-iframe" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                `
+            },
+            { category: "ui", id: "selist", tag: "UI: Mobile App", title: "SeList Now",
+                overview: "SetList Now is an app where you can review the setlists of the artists you want, it has 7,021,486 setlists, 318,380 artists, 336,592 venues, 153,090 festivals that you can look on at any time.",
+                imageCover: "assets/covers/selist_cover.png", imageFull: "assets/projects/selist_full.png"
+            },
+            {
+                category: "ui", id: "wooden", tag: "UI: Website - Landing Page", title: "Wooden Note",
+                overview: "This e-commerce landing page effectively showcases guitars and music accessories, prominently featuring the \"Vintoria II Series\" with a large banner. It guides users through \"Best Sellers\" and a \"Guitars on Sale\" promotion, then expands to \"Accessories\" and \"Featured Brands\" like Fender and Gibson, all supported by clear product displays and calls to action. The footer provides essential navigation and a newsletter signup, creating a comprehensive and user-friendly online shopping experience for musicians.",
+                imageCover: "assets/covers/wooden_cover.png", imageFull: "assets/projects/wooden_full.png"
+            },
+            {
+                category: "ui", id: "gamify", tag: "UI: Mobile App", title: "Gamify Task",
+                overview: "This page provides an overview of \"GAMIFIED TASK,\" a task organization app designed to streamline daily life. It details the intuitive sign-in process, offering options for various user types (personal, work, professional) to customize their experience. The app's interface is highlighted, showcasing features like task viewing, different organization methods, and a step-by-step guide for new users. It also demonstrates how to efficiently add new tasks with options for priority and reminders, emphasizing its gamified approach to productivity.",
+                imageCover: "assets/covers/gamify_cover.png", imageFull: "assets/projects/gamify_full.png"
+            },
+            {
+                category: "industrial", id: "apartment", tag: "Interior & Industrial Design", title: "Apartment",
+                overview: "This apartment features a modern, open-concept design with a harmonious blend of natural wood textures and clean white surfaces. The kitchen boasts light wood cabinetry, a grey stone countertop with an integrated stove, and a breakfast bar with bar stools, flowing seamlessly into the living area furnished with a comfortable sectional sofa and dark rug. The bedroom emphasizes warmth with a dark wood headboard, subtle lighting, and a neutral color palette for bedding. Practical storage solutions are integrated throughout, including a sleek floating media console in the living space and a well-organized closet with mirrored doors and ample shelving. The bathroom continues the modern aesthetic with a floating wood vanity, white sink, and minimalist fixtures. Overall, the apartment combines functionality with a sophisticated, contemporary style.",
+                imageCover: "assets/covers/apartment_cover.png", imageFull: "assets/projects/apartment_full.png"
+            },
+            {
+                category: "ui", id: "harmoni", tag: "Mobile - Desktop App", title: "harmoniGroove",
+                overview: "This page details \"HarmoniGroove,\" a music store app, showcasing both its web platform and mobile application design. It highlights the mobile app's home screen with various content categories, followed by specific screens for individual songs, sharing options, a search function, and playlist management, providing a comprehensive overview of the user experience across different features.",
+                imageCover: "assets/covers/harmoni_cover.png", imageFull: "assets/projects/harmoni_full.png"
+            },
+            {
+                category: "industrial", id: "pizza", tag: "Interior & Industrial Design", title: "Topping Pizza",
+                overview: "\"Toppings Pizza,\" a bubble/counter-style pizza stand. The design features a modern, industrial-chic aesthetic with a black metal frame, exposed \"PIZZA\" marquee lighting, and string lights for ambiance. The counter combines warm wooden paneling with cool grey stone accents and integrated greenery, creating an inviting contrast. Functionally, it includes a Coca-Cola refrigerator, an oven, a display area for toppings, and a point-of-sale system. An adjacent seating area with built-in wooden benches, cushions, and small tables offers customers a comfortable spot to enjoy their pizza. The stand is designed for efficiency and visual appeal in a compact space, ideal for a food court or outdoor setting.",
+                imageCover: "assets/covers/pizza_cover.png", imageFull: "assets/projects/pizza_full.png"
+            },
+            {
+                category: "industrial", id: "medical", tag: "Interior & Industrial Design", title: "Medical Center",
+                overview: "This medical office design prioritizes a child-friendly and functional environment, evident in its vibrant color palette and thoughtful layout. The examination room features a comfortable bed with a pull-out paper dispenser, playful multi-colored steps for easy access, and an adjacent sink for hygiene. The office space is designed with a wooden desk, a blue accent wall, and colorful patient chairs. The reception area is bright and inviting with a multi-toned desk, ample storage, and a \"Pediatría de Precisión\" logo prominently displayed. A waiting area provides a cozy L-shaped sofa and a bean bag chair, ensuring a welcoming and reassuring atmosphere for young patients and their families.",
+                imageCover: "assets/covers/medical_cover.png", imageFull: "assets/projects/medical_full.png"
+            },
+            {
+                category: "industrial", id: "beillin", tag: "Interior & Industrial Design", title: "Beillin Counter",
+                overview: "Design proposal for \"BEILLÍN Punto de Información\" by Metal Plus, detailing a modern information counter. The counter features a U-shaped design with a light grey top and rich wooden paneling on the exterior, accented with LED lighting. Key elements include an integrated information desk with a computer, two internal workspaces, and a prominent \"i\" symbol for information, alongside a colorful \"Beillín\" logo. Functionality is emphasized with built-in storage, including soft-close hinged doors and drawers, and a dedicated space for wheelchair storage. The design aims for a professional yet inviting aesthetic, optimized for both staff and visitors.",
+                imageCover: "assets/covers/beillin_cover.png", imageFull: "assets/projects/beillin_full.png"
+            },
+            {
+                category: "ui", id: "tripflow", tag: "UI: Mobile App", title: "Tripflow",
+                overview: "This app overview details the user research, competitive analysis, and usability testing phases for a travel expense management application. It highlights key features like photo-based receipt logging, clear expense visualizations, and customizable budget alerts, designed for a simple, user-friendly interface. Continuous feedback loops ensured ongoing improvements, addressing user needs for easy tracking and financial management during trips.",
+                imageCover: "assets/covers/tripflow_cover.png", imageFull: "assets/projects/tripflow_full.png"
+            },
             // Logos
             { category: "logo", id: "ember", cardTag: "Logo Design", tag: "Food & Beverage", title: "Ember Coffee Co.", overview: "Specialty coffee brand with a warm, artisanal identity. The steam curves evoke ritual and warmth.", imageCover: "assets/logos/Ember_Coffee_Co.jpeg", imageFull: "assets/logos/Ember_Coffee_Co.jpeg" },
             { category: "logo", id: "nexus", cardTag: "Logo Design", tag: "Technology", title: "Nexus Systems", overview: "B2B software firm. The node grid signals connectivity, data flow, and precision engineering.", imageCover: "assets/logos/Nexus_Systems.jpeg", imageFull: "assets/logos/Nexus_Systems.jpeg" },
@@ -100,6 +147,36 @@ const translations = {
         filter_all: "Todos",
         filter_ind: "Diseño Industrial",
         projects: [
+            { 
+                category: "ui", 
+                id: "serez", 
+                tag: "Identidad de Marca & UI", 
+                title: "Serez Landing", 
+                overview: "Serez Landing es un proyecto de alto impacto que contiene una página de aterrizaje con estilo 'dark editorial', un manual completo de línea gráfica, el diseño de un Mini E-book y una miniatura para YouTube.", 
+                imageCover: "assets/covers/serez_cover.png", 
+                htmlContent: `
+                    <div class="serez-section">
+                        <h2 class="serez-title">Manual de Línea Gráfica</h2>
+                        <p class="serez-desc">Un manual completo que detalla la estética 'dark editorial', la tipografía y el lenguaje visual de la marca Serez.</p>
+                        <iframe src="serez/style-guide-es.html#serez-iframe-style-es" id="serez-iframe-style-es" class="serez-iframe" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                    <div class="serez-section" style="background:#05030a;">
+                        <h2 class="serez-title">Diseño de Landing Page</h2>
+                        <p class="serez-desc">Diseño fluido, no lineal y de alta conversión con efectos de paralaje diseñado para la Masterclass.</p>
+                        <iframe src="serez/index-es.html#serez-iframe-landing-es" id="serez-iframe-landing-es" class="serez-iframe" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                    <div class="serez-section">
+                        <h2 class="serez-title">Mini E-Book</h2>
+                        <p class="serez-desc">Diseño en formato PDF (A4) imprimible manteniendo consistencia total con el manual de marca establecido.</p>
+                        <iframe src="serez/ebook-es.html#serez-iframe-ebook-es" id="serez-iframe-ebook-es" class="serez-iframe" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                    <div class="serez-section" style="background:#05030a;">
+                        <h2 class="serez-title">Miniatura para YouTube</h2>
+                        <p class="serez-desc">Miniatura atractiva y visualmente impactante diseñada para captar la atención y reflejar la calidad premium de la marca.</p>
+                        <iframe src="serez/thumbnail-generator-es.html#serez-iframe-thumb-es" id="serez-iframe-thumb-es" class="serez-iframe" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                `
+            },
             { category: "ui", id: "selist", tag: "UI: App Móvil", title: "SeList Now", overview: "SetList Now es una aplicación donde puedes revisar las listas de canciones de los artistas que desees, cuenta con 7,021,486 listas, 318,380 artistas, 336,592 lugares, y 153,090 festivales que puedes consultar en cualquier momento.", imageCover: "assets/covers/selist_cover.png", imageFull: "assets/projects/selist_full.png" },
             { category: "ui", id: "wooden", tag: "UI: Sitio Web", title: "Wooden Note", overview: "Esta página de aterrizaje de comercio electrónico exhibe eficazmente guitarras y accesorios musicales, destacando prominentemente la \"Vintoria II Series\" con un gran banner. Guía a los usuarios a través de \"Los más vendidos\" y una promoción de \"Guitarras en oferta\", luego se expande a \"Accesorios\" y \"Marcas destacadas\" como Fender y Gibson, todo respaldado por visualizaciones de productos claras y llamadas a la acción. El pie de página proporciona navegación esencial y un registro al boletín, creando una experiencia de compra en línea completa y amigable para los músicos.", imageCover: "assets/covers/wooden_cover.png", imageFull: "assets/projects/wooden_full.png" },
             { category: "ui", id: "gamify", tag: "UI: App Móvil", title: "Gamify Task", overview: "Esta página proporciona una visión general de \"GAMIFIED TASK\", una aplicación de organización de tareas diseñada para optimizar la vida diaria. Detalla el proceso intuitivo de inicio de sesión, ofreciendo opciones para varios tipos de usuarios (personal, trabajo, profesional) para personalizar su experiencia. Se destaca la interfaz de la aplicación, mostrando funciones como la visualización de tareas, diferentes métodos de organización y una guía paso a paso para nuevos usuarios. También demuestra cómo agregar nuevas tareas eficientemente con opciones de prioridad y recordatorios, enfatizando su enfoque gamificado para la productividad.", imageCover: "assets/covers/gamify_cover.png", imageFull: "assets/projects/gamify_full.png" },
@@ -157,7 +234,7 @@ filterBtns.forEach(btn => {
         // Update active class
         filterBtns.forEach(b => b.classList.remove('active'));
         e.target.classList.add('active');
-        
+
         // Render specific category
         currentFilter = e.target.getAttribute('data-filter');
         renderProjects();
@@ -185,7 +262,7 @@ navItems.forEach(item => {
 // Functions
 function renderLanguage() {
     const texts = translations[currentLang];
-    
+
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (texts[key]) {
@@ -207,10 +284,10 @@ function renderProjects() {
         const card = document.createElement('div');
         // Instantly visible so we don't rely only on the one-time scroll observer for newly injected cards
         card.className = 'project-card reveal-on-scroll is-visible';
-        
+
         // Use cardTag if present (e.g. Logo Design), otherwise tag
         const tagToDisplay = project.cardTag || project.tag;
-        
+
         card.innerHTML = `
             <div class="project-img-wrapper">
                 <img src="${project.imageCover}" onerror="this.src='https://via.placeholder.com/300x200?text=Cover+Missing'" alt="${project.title}">
@@ -220,7 +297,7 @@ function renderProjects() {
                 <h3 class="project-title">${project.title}</h3>
             </div>
         `;
-        
+
         card.addEventListener('click', () => openModal(project));
         projectsGrid.appendChild(card);
     });
@@ -232,11 +309,28 @@ function openModal(project) {
     modalTag.textContent = project.tag;
     modalDesc.textContent = project.overview;
 
-    modalImg.src = project.imageFull;
-    modalImg.onerror = function() {
-        this.onerror = null;
-        this.src = "https://via.placeholder.com/900x2000?text=Please+Place+" + project.imageFull.split('/').pop() + "+in+the+" + project.imageFull.split('/')[1] + "+folder";
-    };
+    const modalHtmlContent = document.getElementById('modal-html-content');
+
+    if (project.htmlContent) {
+        // Render HTML presentation
+        modalImg.classList.add('hidden');
+        modalImg.style.display = 'none';
+        
+        modalHtmlContent.innerHTML = project.htmlContent;
+        modalHtmlContent.classList.remove('hidden');
+    } else {
+        // Render single image presentation
+        modalHtmlContent.classList.add('hidden');
+        modalHtmlContent.innerHTML = '';
+        
+        modalImg.classList.remove('hidden');
+        modalImg.style.display = 'block';
+        modalImg.src = project.imageFull;
+        modalImg.onerror = function() {
+            this.onerror = null;
+            this.src = "https://via.placeholder.com/900x2000?text=Please+Place+" + project.imageFull.split('/').pop() + "+in+the+" + project.imageFull.split('/')[1] + "+folder";
+        };
+    }
 
     modalOverlay.classList.remove('hidden');
     document.body.style.overflow = 'hidden'; // Prevent scrolling
@@ -249,7 +343,7 @@ function closeModal() {
 
 function setupTimelineScrollObserver() {
     const timelineItems = document.querySelectorAll('.timeline-item');
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -260,7 +354,7 @@ function setupTimelineScrollObserver() {
         });
     }, {
         root: null,
-        rootMargin: '-30% 0px -40% 0px', 
+        rootMargin: '-30% 0px -40% 0px',
         threshold: 0
     });
 
@@ -271,7 +365,7 @@ function setupTimelineScrollObserver() {
 
 function setupSkillBarsObserver() {
     const progressFills = document.querySelectorAll('.progress-fill');
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -282,7 +376,7 @@ function setupSkillBarsObserver() {
         });
     }, {
         root: null,
-        rootMargin: '0px', 
+        rootMargin: '0px',
         threshold: 0.1
     });
 
@@ -306,3 +400,94 @@ function setupFadeInObserver() {
     });
     hiddenElements.forEach(el => observer.observe(el));
 }
+
+
+
+function closeModal() {
+    modalOverlay.classList.add('hidden');
+    document.body.style.overflow = 'auto'; // Restore scrolling
+}
+
+function setupTimelineScrollObserver() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            } else {
+                entry.target.classList.remove('active');
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '-30% 0px -40% 0px',
+        threshold: 0
+    });
+
+    timelineItems.forEach(item => {
+        observer.observe(item);
+    });
+}
+
+function setupSkillBarsObserver() {
+    const progressFills = document.querySelectorAll('.progress-fill');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Read target width from data attribute
+                const targetWidth = entry.target.getAttribute('data-width');
+                entry.target.style.width = targetWidth;
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    });
+
+    progressFills.forEach(fill => {
+        observer.observe(fill);
+    });
+}
+
+function setupFadeInObserver() {
+    const hiddenElements = document.querySelectorAll('.reveal-on-scroll');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '0px 0px -10% 0px',
+        threshold: 0
+    });
+    hiddenElements.forEach(el => observer.observe(el));
+}
+
+// --- Iframe Communication for Serez HTML Native ---
+window.addEventListener("message", (e) => {
+    if (e.data.type === "resize-iframe") {
+        const iframe = document.getElementById(e.data.id);
+        if (iframe) {
+            iframe.style.height = e.data.height + "px";
+        }
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modalOverlayElement = document.getElementById("modal-overlay");
+    if (modalOverlayElement) {
+        modalOverlayElement.addEventListener("scroll", () => {
+            const scrollY = modalOverlayElement.scrollTop;
+            document.querySelectorAll(".serez-iframe").forEach(iframe => {
+                if (iframe.contentWindow) {
+                    iframe.contentWindow.postMessage({ type: "parent-scroll", scrollY: scrollY, offsetTop: iframe.offsetTop }, "*");
+                }
+            });
+        });
+    }
+});

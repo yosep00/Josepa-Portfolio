@@ -1,0 +1,71 @@
+/* =============================================================
+   Mockup Overrides – Línea Gráfica "Masajes Eróticos"
+   ============================================================= */
+
+/* Nuevos colores principales */
+:root {
+    --accent: #c29669;        /* rosa cálido – color primario (CTA, taglines) */
+    --accent-hover: #d4b9b2;  /* rosa suave – hover y estados secundarios */
+    --primary-pink: #c29669;
+    --secondary-pink: #d4b9b2;
+}
+
+/* Botón primario – usa los nuevos tonos */
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--bg-main);
+    border: 1px solid var(--accent);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--accent);
+    box-shadow: 0 10px 20px rgba(212, 185, 178, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Tagline y números de feature usan el rosa secundario */
+.tagline {
+    color: var(--accent);
+}
+
+.feature-number {
+    color: var(--secondary-pink);
+    opacity: 0.9;
+}
+
+/* Imagen hero – aplicar overlay tenue en fondo oscuro */
+.hero {
+    background-color: var(--bg-darker);
+}
+
+.hero-image-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(20,18,17,0.6), transparent);
+    z-index: 1;
+}
+
+/* Texto de sección – uso de rosa para subtítulos */
+.section-title {
+    color: var(--text-main);
+}
+
+.body-text {
+    color: var(--text-muted);
+}
+
+/* Añadimos una textura sutil para fondos de bloques */
+.block-bg {
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255,255,255,0.02),
+        rgba(255,255,255,0.02) 10px,
+        rgba(255,255,255,0.04) 10px,
+        rgba(255,255,255,0.04) 20px
+    );
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 2rem;
+}

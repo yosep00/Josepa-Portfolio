@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serez Studio | Design System - Landing Page Components</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: var(--bg-darker);
+            padding-top: 40px;
+        }
+        .atomic-header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .atomic-section {
+            margin-bottom: 80px;
+            background-color: var(--bg-main);
+            padding: 60px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .atomic-title {
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--accent);
+            margin-bottom: 40px;
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+        }
+        
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        .color-swatch {
+            height: 100px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .color-label { font-family: var(--font-sans); font-size: 0.9rem; }
+        .color-hex { color: var(--text-muted); font-size: 0.8rem; }
+        
+        .typo-specimen { margin-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 20px;}
+        .typo-label { font-family: var(--font-sans); color: var(--accent); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 10px;}
+        
+        .molecule-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .page-label {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: var(--accent);
+            color: var(--bg-main);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-family: var(--font-sans);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            z-index: 1000;
+        }
+        
+        .use-note {
+            background: rgba(217, 197, 178, 0.1);
+            border-left: 3px solid var(--accent);
+            padding: 15px 20px;
+            margin-top: 20px;
+            font-family: var(--font-sans);
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        
+        .use-note strong {
+            color: var(--accent);
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-label">ATOMIC DESIGN - SEREZ STUDIO</div>
+
+    <div class="container">
+        <header class="atomic-header">
+            <h1 class="hero-title" style="font-size: 3.5rem;">Sistema de Componentes</h1>
+            <p class="tagline">Landing Page - Serez Studio Masterclass</p>
+        </header>
+
+        <!-- ==========================================
+             STYLES (TOKENS)
+             ========================================== -->
+        <section class="atomic-section">
+            <h2 class="atomic-title">1. Design Tokens</h2>
+            
+            <h3 class="typo-label" style="margin-top: 30px;">Colores</h3>
+            <div class="color-grid" style="margin-bottom: 50px;">
+                <div>
+                    <div class="color-swatch" style="background-color: #141211;"></div>
+                    <div class="color-label">Background Main</div>
+                    <div class="color-hex">#141211</div>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background-color: #0d0c0b;"></div>
+                    <div class="color-label">Background Darker</div>
+                    <div class="color-hex">#0d0c0b</div>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background-color: #D9C5B2;"></div>
+                    <div class="color-label">Accent</div>
+                    <div class="color-hex">#D9C5B2</div>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background-color: #F4F1EA;"></div>
+                    <div class="color-label">Text Main</div>
+                    <div class="color-hex">#F4F1EA</div>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background-color: #B3AAA1;"></div>
+                    <div class="color-label">Text Muted</div>
+                    <div class="color-hex">#B3AAA1</div>
+                </div>
+            </div>
+
+            <h3 class="typo-label">Tipografía</h3>
+            <div class="typo-specimen">
+                <div class="typo-label">Playfair Display - Headers</div>
+                <h1 style="font-size: 4rem;">El arte del tacto.</h1>
+            </div>
+            <div class="typo-specimen">
+                <div class="typo-label">Inter - Body & UI</div>
+                <p class="body-text">Un viaje sensorial diseñado para desafiar la rutina.</p>
+            </div>
+            <div class="typo-specimen" style="border:none;">
+                <div class="typo-label">Inter Uppercase - Tagline</div>
+                <p class="tagline">MASTERCLASS EXCLUSIVA</p>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             ATOMS
+             ========================================== -->
+        <section class="atomic-section">
+            <h2 class="atomic-title">2. Átomos (Componentes Básicos)</h2>
+            
+            <h3 class="typo-label" style="margin-top: 30px;">2.1 Button Primary</h3>
+            <div style="display: flex; gap: 20px; align-items: center; padding: 20px; background: var(--bg-darker); border-radius: 10px;">
+                <div>
+                    <div class="typo-label" style="margin-bottom: 5px;">Default</div>
+                    <a href="#" class="btn btn-primary" style="transform:none; box-shadow:none;">¡COMENCEMOS!</a>
+                </div>
+                <div>
+                    <div class="typo-label" style="margin-bottom: 5px;">Hover</div>
+                    <a href="#" class="btn" style="border: 1px solid var(--accent); color: var(--accent); background: transparent;">¡COMENCEMOS!</a>
+                </div>
+                <div>
+                    <div class="typo-label" style="margin-bottom: 5px;">Large</div>
+                    <a href="#" class="btn btn-primary btn-large" style="transform:none; box-shadow:none;">ACCEDER A LA MASTERCLASS</a>
+                </div>
+            </div>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                Hero: "¡COMENCEMOS!" | Final CTA: "ACCEDER A LA MASTERCLASS"
+            </div>
+
+            <h3 class="typo-label" style="margin-top: 30px;">2.2 Tagline</h3>
+            <div style="padding: 20px; background: var(--bg-darker); border-radius: 10px;">
+                <p class="tagline">MASTERCLASS EXCLUSIVA</p>
+                <p class="tagline">UNA INVITACIÓN AL DESEO</p>
+                <p class="tagline">TU GUÍA EN ESTE VIAJE</p>
+            </div>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                Hero (tagline), Experience (tagline), Expert (tagline)
+            </div>
+
+            <h3 class="typo-label" style="margin-top: 30px;">2.3 Title H1 - Hero</h3>
+            <div style="padding: 20px; background: var(--bg-darker); border-radius: 10px;">
+                <h1 class="hero-title" style="font-size: 3rem; margin-bottom: 0;">Despierta una <em>conexión</em> que trasciende la piel.</h1>
+            </div>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                Solo en Hero Section. Font: Playfair Display 72px
+            </div>
+
+            <h3 class="typo-label" style="margin-top: 30px;">2.4 Title H2 - Section</h3>
+            <div style="padding: 20px; background: var(--bg-darker); border-radius: 10px;">
+                <h2 class="section-title" style="font-size: 2.5rem; margin-bottom: 0;">Un Viaje Hacia lo Desconocido</h2>
+                <h2 class="section-title" style="font-size: 2.5rem; margin-bottom: 0;">El Arte de <em>Sentir</em> y Conectar</h2>
+            </div>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                Features, Experience, Expert, Final CTA. Font: Playfair Display 48px
+            </div>
+
+            <h3 class="typo-label" style="margin-top: 30px;">2.5 Title H3 - Card</h3>
+            <div style="padding: 20px; background: var(--bg-darker); border-radius: 10px;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 0;">El Poder de la Presencia</h3>
+            </div>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                Feature Cards. Font: Playfair Display 24px
+            </div>
+
+            <h3 class="typo-label" style="margin-top: 30px;">2.6 Paragraph Body</h3>
+            <div style="padding: 20px; background: var(--bg-darker); border-radius: 10px;">
+                <p class="hero-subtitle" style="max-width: 100%;">Descubre el arte del tacto consciente con Manuela Escobar.</p>
+                <p class="body-text">El tacto es el idioma de la intimidad.</p>
+                <p style="color: var(--text-muted); font-size: 1rem;">Aprende a estar completamente en el "ahora".</p>
+            </div>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                Hero Subtitle (20px), Body Text (18px), Card Text (16px)
+            </div>
+
+            <h3 class="typo-label" style="margin-top: 30px;">2.7 Feature Number</h3>
+            <div style="padding: 20px; background: var(--bg-darker); border-radius: 10px;">
+                <div class="feature-number">01</div>
+                <div class="feature-number">02</div>
+                <div class="feature-number" style="opacity: 1;">03</div>
+            </div>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                Feature Cards - números 01, 02, 03. Font: Playfair Display 48px, Opacity 0.5
+            </div>
+
+            <h3 class="typo-label" style="margin-top: 30px;">2.8 Logo</h3>
+            <div style="padding: 20px; background: var(--bg-darker); border-radius: 10px;">
+                <div class="logo">SEREZ <span class="logo-light">STUDIO</span></div>
+            </div>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                Header/Navbar. Font: Inter 20px. "SEREZ" weight 600, "STUDIO" weight 300
+            </div>
+
+            <h3 class="typo-label" style="margin-top: 30px;">2.9 Nav Link</h3>
+            <div style="padding: 20px; background: var(--bg-darker); border-radius: 10px; display: flex; gap: 30px;">
+                <a href="#" class="nav-link" style="margin-left: 0;">La Experta</a>
+                <a href="#" class="nav-link" style="margin-left: 0; color: var(--accent);">El Viaje</a>
+            </div>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                Header/Navbar. Links: "La Experta", "El Viaje"
+            </div>
+
+            <h3 class="typo-label" style="margin-top: 30px;">2.10 Image Container</h3>
+            <div style="padding: 20px; background: var(--bg-darker); border-radius: 10px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+                <div style="height: 150px; border-radius: 20px 20px 20px 200px; background: #2a2522; overflow: hidden;">
+                    <span style="color: rgba(255,255,255,0.3); font-size: 12px; padding: 10px; display: block;">Hero</span>
+                </div>
+                <div style="height: 150px; border-radius: 20px 100px 20px 20px; background: #2a2522; overflow: hidden;">
+                    <span style="color: rgba(255,255,255,0.3); font-size: 12px; padding: 10px; display: block;">Experience</span>
+                </div>
+                <div style="height: 150px; border-radius: 200px 20px 20px 20px; background: #2a2522; overflow: hidden;">
+                    <span style="color: rgba(255,255,255,0.3); font-size: 12px; padding: 10px; display: block;">Expert</span>
+                </div>
+            </div>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                Hero (border-radius 20px 20px 20px 200px), Experience (20px 100px 20px 20px), Expert (200px 20px 20px 20px)
+            </div>
+
+            <h3 class="typo-label" style="margin-top: 30px;">2.11 Decorative Circle</h3>
+            <div style="padding: 20px; background: var(--bg-darker); border-radius: 10px; height: 200px; position: relative;">
+                <div style="position: absolute; bottom: 20px; left: 20px; width: 100px; height: 100px; border: 1px solid var(--accent); border-radius: 50%; opacity: 0.3;"></div>
+            </div>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                Hero - elemento decorativo detrás de imagen. Size: 200px, Opacity: 0.3
+            </div>
+        </section>
+
+        <!-- ==========================================
+             MOLECULES
+             ========================================== -->
+        <section class="atomic-section">
+            <h2 class="atomic-title">3. Moléculas (Componentes Combinados)</h2>
+            
+            <h3 class="typo-label" style="margin-top: 30px;">3.1 Navbar</h3>
+            <div style="padding: 20px 40px; background: var(--bg-darker); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center;">
+                <div class="logo">SEREZ <span class="logo-light">STUDIO</span></div>
+                <nav class="nav">
+                    <a href="#" class="nav-link">La Experta</a>
+                    <a href="#" class="nav-link">El Viaje</a>
+                </nav>
+            </div>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                Header fijo en todas las secciones. Combina: Logo + Nav Links
+            </div>
+
+            <h3 class="typo-label" style="margin-top: 30px;">3.2 Feature Card</h3>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                <div class="feature-card" style="transform: none; opacity: 1;">
+                    <div class="feature-number">01</div>
+                    <h3>El Poder de la Presencia</h3>
+                    <p>Aprende a estar completamente en el "ahora", usando la respiración y la intención para crear un espacio seguro y profundamente magnético.</p>
+                </div>
+            </div>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                Grid de 3 tarjetas en Features Section. Combina: Feature Number + Title H3 + Paragraph
+            </div>
+
+            <h3 class="typo-label" style="margin-top: 30px;">3.3 Hero Content Block</h3>
+            <div style="padding: 20px; background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); max-width: 600px;">
+                <p class="tagline">MASTERCLASS EXCLUSIVA</p>
+                <h1 class="hero-title" style="font-size: 2.5rem; margin-bottom: 1rem;">Despierta una <em>conexión</em> que trasciende la piel.</h1>
+                <p class="hero-subtitle" style="max-width: 100%; margin-bottom: 1.5rem;">Descubre el arte del tacto consciente con Manuela Escobar. Un viaje sensorial diseñado para desafiar la rutina.</p>
+                <a href="#" class="btn btn-primary" style="transform:none; box-shadow:none;">¡COMENCEMOS!</a>
+            </div>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                Lado izquierdo del Hero. Combina: Tagline + H1 + Paragraph + Button
+            </div>
+
+            <h3 class="typo-label" style="margin-top: 30px;">3.4 Section Text Block</h3>
+            <div style="padding: 40px; background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+                <p class="tagline">UNA INVITACIÓN AL DESEO</p>
+                <h2 class="section-title" style="font-size: 2.5rem; margin-bottom: 1rem;">El Arte de <em>Sentir</em> y Conectar</h2>
+                <p class="body-text">El tacto es el idioma de la intimidad. En esta Masterclass, exploraremos cómo cada movimiento puede convertirse en una experiencia transformadora.</p>
+            </div>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                Experience Section (texto), Expert Section (texto). Combina: Tagline + H2 + Paragraph
+            </div>
+
+            <h3 class="typo-label" style="margin-top: 30px;">3.5 Image Hero with Decor</h3>
+            <div style="position: relative; height: 400px; width: 100%; border-radius: 20px 20px 20px 200px; overflow: hidden; background: #2a2522;">
+                <div style="position: absolute; bottom: -20px; left: -20px; width: 100px; height: 100px; border: 1px solid var(--accent); border-radius: 50%; opacity: 0.3; z-index: -1;"></div>
+            </div>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                Lado derecho del Hero. Combina: Image Container + Decorative Circle
+            </div>
+        </section>
+
+        <!-- ==========================================
+             ORGANISMS
+             ========================================== -->
+        <section class="atomic-section">
+            <h2 class="atomic-title">4. Organismos (Secciones Completas)</h2>
+            
+            <h3 class="typo-label" style="margin-top: 30px;">4.1 Hero Section</h3>
+            <p style="color: var(--text-muted);">Contiene: Navbar + Hero Content Block + Image Hero with Decor</p>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                Section completa del Hero. Grid 2 columnas. Ancho: 1440px, Min Height: 100vh
+            </div>
+
+            <h3 class="typo-label" style="margin-top: 30px;">4.2 Features Section</h3>
+            <p style="color: var(--text-muted);">Contiene: H2 Section Title + Grid 3 Feature Cards</p>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                "Un Viaje Hacia lo Desconocido" + 3 tarjetas
+            </div>
+
+            <h3 class="typo-label" style="margin-top: 30px;">4.3 Experience Section</h3>
+            <p style="color: var(--text-muted);">Contiene: Image Experience + Section Text Block (grid 2 columnas)</p>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                Imagen izquierda + texto derecho. Padding: 100px 0
+            </div>
+
+            <h3 class="typo-label" style="margin-top: 30px;">4.4 Banner Parallax Transition</h3>
+            <p style="color: var(--text-muted);">Contiene: Full Width Image + Banner Overlay Gradient</p>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                Transición entre Experience y Expert. Height: 60vh
+            </div>
+
+            <h3 class="typo-label" style="margin-top: 30px;">4.5 Expert Section</h3>
+            <p style="color: var(--text-muted);">Contiene: Image Expert + Section Text Block + Background Darker</p>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                "Manuela Escobar" + texto + imagen. Background: #0d0c0b
+            </div>
+
+            <h3 class="typo-label" style="margin-top: 30px;">4.6 Final CTA Section</h3>
+            <p style="color: var(--text-muted);">Contiene: Parallax Background + CTA Overlay + Title + Paragraph + Button Large</p>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                "¿Estás lista para transformar tus encuentros?" + botão Large. Padding: 150px 0
+            </div>
+
+            <h3 class="typo-label" style="margin-top: 30px;">4.7 Footer</h3>
+            <p style="color: var(--text-muted);">Contiene: Copyright text + Border Top</p>
+            <div class="use-note">
+                <strong>Uso en landing:</strong>
+                "© 2026 Serez Studio. Todos los derechos reservados."
+            </div>
+        </section>
+
+        <!-- ==========================================
+             LANDING PAGE
+             ========================================== -->
+        <section class="atomic-section">
+            <h2 class="atomic-title">5. Landing Page (Ensamblaje)</h2>
+            <p style="color: var(--text-muted);">La landing page se ensambla en este orden:</p>
+            <ol style="color: var(--text-muted); padding-left: 20px; line-height: 2;">
+                <li>Hero Section</li>
+                <li>Features Section</li>
+                <li>Experience Section</li>
+                <li>Banner Parallax Transition</li>
+                <li>Expert Section</li>
+                <li>Final CTA Section</li>
+                <li>Footer</li>
+            </ol>
+            <div class="use-note">
+                <strong>Ancho total:</strong> 1440px | <strong>Padding X:</strong> 5%
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

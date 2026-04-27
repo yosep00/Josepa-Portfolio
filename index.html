@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,26 +9,30 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MHPVB4HJ');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MHPVB4HJ');</script>
     <!-- End Google Tag Manager -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJP7KT3CRC"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-RJP7KT3CRC');
+        gtag('config', 'G-RJP7KT3CRC');
     </script>
 </head>
+
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHPVB4HJ"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHPVB4HJ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <!-- Full-screen project modal -->
     <div id="modal-overlay" class="modal-overlay hidden">
@@ -38,6 +43,8 @@
                 <span id="modal-tag" class="project-tag" style="margin-bottom:1rem;">Tag</span>
                 <p id="modal-desc">Overview will go here...</p>
             </div>
+            <!-- HTML Content Container -->
+            <div id="modal-html-content" class="modal-html-content hidden"></div>
             <!-- Large elongated Figma image -->
             <img id="modal-img" class="modal-figma-img" src="" alt="Project Presentation">
         </div>
@@ -48,13 +55,16 @@
         <div class="nav-brand">
             <!-- Clicking Logo returns to home top -->
             <a href="#home">
-                <img src="assets/JPC_logo.png" alt="JPC" class="nav-logo" onerror="this.outerHTML='<span style=\'font-size:1.5rem;font-weight:800;color:var(--accent);\'>JPC</span>'">
+                <img src="assets/JPC_logo.png" alt="JPC" class="nav-logo"
+                    onerror="this.outerHTML='<span style=\'font-size:1.5rem;font-weight:800;color:var(--accent);\'>JPC</span>'">
             </a>
         </div>
 
         <!-- Hamburger Icon -->
         <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="var(--text-primary)"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="var(--text-primary)">
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+            </svg>
         </button>
 
         <div class="nav-links" id="nav-links">
@@ -68,26 +78,29 @@
 
     <!-- Header / Hero Section con Doble Imagen de Fondo superpuestas -->
     <header id="home" class="hero section">
-        
+
         <div class="hero-hover-container">
             <div class="hero-hover-img img-left" style="background-image: url('assets/hover1.png');"></div>
             <div class="hero-hover-img img-right" style="background-image: url('assets/hover2.png');"></div>
         </div>
-        
+
         <div class="hero-inner-wrapper">
             <div class="hero-content">
                 <h1 data-i18n="hero_greeting">Hi, I'm <span class="highlight">Jose Pablo Correa</span></h1>
                 <h3 data-i18n="hero_subtitle">Industrial Designer & UI/UX Designer</h3>
-                <p data-i18n="hero_desc">Industrial designer living in Medellin, Colombia. I specialize in creating intuitive, effective, and accessible user experiences.</p>
+                <p data-i18n="hero_desc">Industrial designer living in Medellin, Colombia. I specialize in creating
+                    intuitive, effective, and accessible user experiences.</p>
                 <div class="hero-actions">
                     <a href="#projects" class="btn btn-primary" data-i18n="btn_projects">View My Projects</a>
-                    <a href="https://www.behance.net/josepablocorrea" target="_blank" class="btn btn-secondary">Behance</a>
+                    <a href="https://www.behance.net/josepablocorrea" target="_blank"
+                        class="btn btn-secondary">Behance</a>
                 </div>
             </div>
             <!-- Reclutador Profile Picture on right side of Hero -->
             <div class="hero-aside-profile">
                 <!-- Usamos perfil en JPG tal y como solicitaste -->
-                <img src="assets/profile_pic.jpg" alt="Jose Pablo Correa" class="hero-profile-pic" onerror="this.src='https://via.placeholder.com/250/0b0716/8b5cf6?text=Profile+Pic'">
+                <img src="assets/profile_pic.jpg" alt="Jose Pablo Correa" class="hero-profile-pic"
+                    onerror="this.src='https://via.placeholder.com/250/0b0716/8b5cf6?text=Profile+Pic'">
             </div>
         </div>
     </header>
@@ -96,8 +109,10 @@
         <!-- Projects Section -->
         <section id="projects" class="section">
             <h2 class="section-title reveal-on-scroll" data-i18n="nav_projects">Projects</h2>
-            <p class="section-subtitle reveal-on-scroll" data-i18n="projects_intro" style="text-align: left; max-width: 100%; margin: 0 0 40px 0; color: var(--text-color); opacity: 0.8; font-size: 1.1rem; line-height: 1.6; padding: 0 20px;"></p>
-            
+            <p class="section-subtitle reveal-on-scroll" data-i18n="projects_intro"
+                style="text-align: left; max-width: 100%; margin: 0 0 40px 0; color: var(--text-color); opacity: 0.8; font-size: 1.1rem; line-height: 1.6; padding: 0 20px;">
+            </p>
+
             <div class="project-filters reveal-on-scroll">
                 <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All</button>
                 <button class="filter-btn" data-filter="ui">UI/UX</button>
@@ -116,17 +131,23 @@
             <div class="about-grid">
                 <div class="about-content reveal-on-scroll">
                     <h3 data-i18n="about_title">My background</h3>
-                    <p data-i18n="about_text">With a strong background in industrial and product design from Universidad de San Buenaventura Medellín, I specialize in creating intuitive, effective, and accessible user experiences. As a UI designer, I apply my UX expertise and advanced knowledge of Sketch App and Figma to develop innovative interfaces that improve user interaction, satisfaction, and trust.</p>
-                    
+                    <p data-i18n="about_text">With a strong background in industrial and product design from Universidad
+                        de San Buenaventura Medellín, I specialize in creating intuitive, effective, and accessible user
+                        experiences. As a UI designer, I apply my UX expertise and advanced knowledge of Sketch App and
+                        Figma to develop innovative interfaces that improve user interaction, satisfaction, and trust.
+                    </p>
+
                     <div class="my-passions text-center">
                         <h4 data-i18n="work_title">I WORK</h4>
                         <p data-i18n="work_desc">I delve into design, technology, and innovation.</p>
-                        
+
                         <h4 data-i18n="venture_title">I VENTURE</h4>
-                        <p data-i18n="venture_desc">Venturing into new horizons fuels my creativity. I enjoy music, skate, and movies.</p>
+                        <p data-i18n="venture_desc">Venturing into new horizons fuels my creativity. I enjoy music,
+                            skate, and movies.</p>
 
                         <h4 data-i18n="dream_title">I DREAM</h4>
-                        <p data-i18n="dream_desc">I aspire to craft designs that inspire and transform. My dream is to collaborate with forward-thinking teams driving change.</p>
+                        <p data-i18n="dream_desc">I aspire to craft designs that inspire and transform. My dream is to
+                            collaborate with forward-thinking teams driving change.</p>
                     </div>
                 </div>
 
@@ -146,7 +167,8 @@
                         <div class="timeline-item">
                             <div class="timeline-year">2018</div>
                             <span class="timeline-date">United States of America!</span>
-                            <p data-i18n="t3">Relocate to Pennsylvania, USA. Worked as a lifeguard in Hershey park, learning about many cultures.</p>
+                            <p data-i18n="t3">Relocate to Pennsylvania, USA. Worked as a lifeguard in Hershey park,
+                                learning about many cultures.</p>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-year">2020</div>
@@ -164,10 +186,12 @@
 
             <!-- Skills Hybrid Bento Box Layout -->
             <div style="margin-top: 5rem; padding-bottom: 2rem;">
-                <h3 class="text-center reveal-on-scroll" style="color:var(--text-primary); font-weight:800; font-size:2rem; margin-bottom: 3.5rem;" data-i18n="skills_title">Skills</h3>
-                
+                <h3 class="text-center reveal-on-scroll"
+                    style="color:var(--text-primary); font-weight:800; font-size:2rem; margin-bottom: 3.5rem;"
+                    data-i18n="skills_title">Skills</h3>
+
                 <div class="bento-grid reveal-on-scroll">
-                    
+
                     <!-- Card 1: UX/UI (Tall) -->
                     <div class="bento-wrapper bento-tall" style="animation-delay: 0.1s;">
                         <div class="bento-item float-delay-1">
@@ -177,23 +201,33 @@
                             </div>
                             <div class="bento-content">
                                 <div class="card-skill-item">
-                                    <div class="skill-name"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" class="skill-logo" alt="Figma"> <span>Figma</span> </div>
+                                    <div class="skill-name"> <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                                            class="skill-logo" alt="Figma"> <span>Figma</span> </div>
                                     <span class="proficiency-badge expert">Expert</span>
                                 </div>
                                 <div class="card-skill-item">
-                                    <div class="skill-name"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-plain.svg" class="skill-logo bright-logo" alt="Illustrator"> <span>Illustrator</span> </div>
+                                    <div class="skill-name"> <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-plain.svg"
+                                            class="skill-logo bright-logo" alt="Illustrator"> <span>Illustrator</span>
+                                    </div>
                                     <span class="proficiency-badge advanced">Advanced</span>
                                 </div>
                                 <div class="card-skill-item">
-                                    <div class="skill-name"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-plain.svg" class="skill-logo bright-logo" alt="Photoshop"> <span>Photoshop</span> </div>
+                                    <div class="skill-name"> <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-plain.svg"
+                                            class="skill-logo bright-logo" alt="Photoshop"> <span>Photoshop</span>
+                                    </div>
                                     <span class="proficiency-badge advanced">Advanced</span>
                                 </div>
                                 <div class="card-skill-item">
-                                    <div class="skill-name"> <i data-lucide="layers" style="color: #a259ff;"></i> <span>Prototyping</span> </div>
+                                    <div class="skill-name"> <i data-lucide="layers" style="color: #a259ff;"></i>
+                                        <span>Prototyping</span> </div>
                                     <span class="proficiency-badge expert">Expert</span>
                                 </div>
                                 <div class="card-skill-item">
-                                    <div class="skill-name"> <i data-lucide="layout" style="color: #0ea5e9;"></i> <span>Wireframing</span> </div>
+                                    <div class="skill-name"> <i data-lucide="layout" style="color: #0ea5e9;"></i>
+                                        <span>Wireframing</span> </div>
                                     <span class="proficiency-badge expert">Expert</span>
                                 </div>
                             </div>
@@ -209,19 +243,23 @@
                             </div>
                             <div class="bento-content two-columns">
                                 <div class="card-skill-item">
-                                    <div class="skill-name"> <img src="assets/solidworks.svg" class="skill-logo" alt="SolidWorks"> <span>SolidWorks</span> </div>
+                                    <div class="skill-name"> <img src="assets/solidworks.svg" class="skill-logo"
+                                            alt="SolidWorks"> <span>SolidWorks</span> </div>
                                     <span class="proficiency-badge expert">Expert</span>
                                 </div>
                                 <div class="card-skill-item">
-                                    <div class="skill-name"> <img src="assets/sketchup.svg" class="skill-logo" alt="SketchUp"> <span>SketchUp</span> </div>
+                                    <div class="skill-name"> <img src="assets/sketchup.svg" class="skill-logo"
+                                            alt="SketchUp"> <span>SketchUp</span> </div>
                                     <span class="proficiency-badge advanced">Advanced</span>
                                 </div>
                                 <div class="card-skill-item">
-                                    <div class="skill-name"> <img src="assets/inventor.svg" class="skill-logo" alt="Autodesk Inventor"> <span>Inventor</span> </div>
+                                    <div class="skill-name"> <img src="assets/inventor.svg" class="skill-logo"
+                                            alt="Autodesk Inventor"> <span>Inventor</span> </div>
                                     <span class="proficiency-badge advanced">Advanced</span>
                                 </div>
                                 <div class="card-skill-item">
-                                    <div class="skill-name"> <img src="assets/keyshot.svg" class="skill-logo bright-logo" alt="KeyShot"> <span>KeyShot</span> </div>
+                                    <div class="skill-name"> <img src="assets/keyshot.svg"
+                                            class="skill-logo bright-logo" alt="KeyShot"> <span>KeyShot</span> </div>
                                     <span class="proficiency-badge expert">Expert</span>
                                 </div>
                             </div>
@@ -237,11 +275,13 @@
                             </div>
                             <div class="bento-content">
                                 <div class="card-skill-item">
-                                    <div class="skill-name"> <i data-lucide="users" style="color: #10b981;"></i> <span>Research</span> </div>
+                                    <div class="skill-name"> <i data-lucide="users" style="color: #10b981;"></i>
+                                        <span>Research</span> </div>
                                     <span class="proficiency-badge strategy">Strategy</span>
                                 </div>
                                 <div class="card-skill-item">
-                                    <div class="skill-name"> <i data-lucide="brain" style="color: #ec4899;"></i> <span>Thinking</span> </div>
+                                    <div class="skill-name"> <i data-lucide="brain" style="color: #ec4899;"></i>
+                                        <span>Thinking</span> </div>
                                     <span class="proficiency-badge visionary">Visionary</span>
                                 </div>
                             </div>
@@ -257,11 +297,13 @@
                             </div>
                             <div class="bento-content">
                                 <div class="card-skill-item">
-                                    <div class="skill-name"> <i data-lucide="message-circle" style="color: #8b5cf6;"></i> <span>Spanish</span> </div>
+                                    <div class="skill-name"> <i data-lucide="message-circle"
+                                            style="color: #8b5cf6;"></i> <span>Spanish</span> </div>
                                     <span class="proficiency-badge native">Native</span>
                                 </div>
                                 <div class="card-skill-item">
-                                    <div class="skill-name"> <i data-lucide="message-square" style="color: #3b82f6;"></i> <span>English</span> </div>
+                                    <div class="skill-name"> <i data-lucide="message-square"
+                                            style="color: #3b82f6;"></i> <span>English</span> </div>
                                     <span class="proficiency-badge fluent">Fluent (C1)</span>
                                 </div>
                             </div>
@@ -276,10 +318,11 @@
         <section id="contact" class="section">
             <h2 class="section-title reveal-on-scroll" data-i18n="nav_contact">Contact</h2>
             <div class="contact-wrapper">
-                
+
                 <!-- Circular Profile Image (50% bigger) -->
                 <div class="profile-img-container reveal-on-scroll">
-                    <img src="assets/profile_pic.jpg" alt="Jose Pablo" class="profile-img" onerror="this.src='https://via.placeholder.com/225/0b0716/8b5cf6?text=Profile'">
+                    <img src="assets/profile_pic.jpg" alt="Jose Pablo" class="profile-img"
+                        onerror="this.src='https://via.placeholder.com/225/0b0716/8b5cf6?text=Profile'">
                 </div>
 
                 <div class="contact-details reveal-on-scroll">
@@ -291,23 +334,32 @@
                     </div>
                     <div class="contact-item">
                         <h4 data-i18n="social_title">Social Networks</h4>
-                        <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 0.8rem; margin-bottom: 1rem;">
+                        <div
+                            style="display: flex; gap: 1rem; justify-content: center; margin-top: 0.8rem; margin-bottom: 1rem;">
                             <!-- Behance Original Color Icon -->
-                            <a href="https://www.behance.net/josepablocorrea" target="_blank" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" title="Behance Profile">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/behance/behance-original.svg" width="40" height="40" alt="Behance">
+                            <a href="https://www.behance.net/josepablocorrea" target="_blank"
+                                style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'"
+                                onmouseout="this.style.transform='scale(1)'" title="Behance Profile">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/behance/behance-original.svg"
+                                    width="40" height="40" alt="Behance">
                             </a>
                             <!-- LinkedIn Original Color Icon -->
-                            <a href="https://www.linkedin.com/in/jose-pablo-correa/" target="_blank" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" title="LinkedIn Profile">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" width="40" height="40" alt="LinkedIn">
+                            <a href="https://www.linkedin.com/in/jose-pablo-correa/" target="_blank"
+                                style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'"
+                                onmouseout="this.style.transform='scale(1)'" title="LinkedIn Profile">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
+                                    width="40" height="40" alt="LinkedIn">
                             </a>
                         </div>
-                        <a href="mailto:contact@example.com" class="btn btn-primary" data-i18n="btn_email">Send an Email</a>
+                        <a href="mailto:contact@example.com" class="btn btn-primary" data-i18n="btn_email">Send an
+                            Email</a>
                     </div>
                 </div>
 
                 <!-- Map separate below -->
                 <div class="map-container reveal-on-scroll">
-                    <img src="assets/map.png" alt="Location Map" onerror="this.outerHTML='<span style=\'color:var(--text-secondary)\'>Map Image (Place in assets/map.png)</span>'">
+                    <img src="assets/map.png" alt="Location Map"
+                        onerror="this.outerHTML='<span style=\'color:var(--text-secondary)\'>Map Image (Place in assets/map.png)</span>'">
                 </div>
             </div>
         </section>
@@ -319,8 +371,9 @@
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
-      lucide.createIcons();
+        lucide.createIcons();
     </script>
     <script src="app.js"></script>
 </body>
+
 </html>

@@ -323,6 +323,41 @@ h3 { font-size: 1.5rem; font-weight: 400; color: var(--text-secondary); margin-b
 .modal-overview p { color: var(--text-secondary); }
 .modal-figma-img { width: 100%; height: auto; display: block; }
 
+/* Custom HTML Content inside Modal */
+.modal-html-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.modal-html-content.hidden {
+    display: none;
+}
+.modal-html-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.serez-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #0f0a1c;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+.serez-title {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+.serez-desc {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
 /* About Section */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
 .about-content {
@@ -656,4 +691,13 @@ footer { text-align: center; padding: 2rem; border-top: 1px solid var(--glass-bo
 .reveal-on-scroll.is-visible {
     opacity: 1;
     transform: translateY(0) scale(1);
+}
+
+.serez-iframe {
+    width: 100%;
+    border: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: block;
 }

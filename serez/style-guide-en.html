@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serez Studio, Brand Style Guide</title>
+    <!-- Fuentes: Inter (cuerpo) y Playfair Display (títulos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Estilos base -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* -----------------------------------------------------
+           Configuración de impresión y visualización A4
+        ----------------------------------------------------- */
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        
+        body {
+            background-color: #0d0c0b; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 0;
+            gap: 2rem;
+            margin: 0;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm; 
+            background-color: var(--bg-main);
+            position: relative;
+            box-sizing: border-box;
+            padding: 20mm;
+            page-break-after: always;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            overflow: hidden;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page-number { 
+            position: absolute; 
+            bottom: 20mm; 
+            right: 20mm; 
+            font-size: 0.9rem; 
+            color: var(--text-muted); 
+        }
+
+        /* Variables */
+        :root {
+            --pink-1: #d4b9b2;   
+            --pink-2: #c29669;   
+        }
+
+        /* -----------------------------------------------------
+           Componentes de la guía
+        ----------------------------------------------------- */
+        .guide-section { padding: 0; margin-bottom: 2rem; }
+        .section-title { margin-bottom: 1.5rem; }
+        .color-swatch { width: 100%; height: 180px; border-radius: 8px; margin-bottom: 8px; border: 1px solid rgba(255,255,255,0.1); }
+        .color-label { font-family: var(--font-sans); font-size: 0.9rem; }
+        .color-hex { color: var(--text-muted); font-size: 0.8rem; }
+        
+        .concept-references {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .concept-img { 
+            width: 32%; 
+            height: 150px;
+            border-radius: 8px; 
+            object-fit: cover; 
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .typo-example { margin-bottom: 2rem; }
+        .typo-example h1, .typo-example h2, .typo-example h3, .typo-example p {
+            margin: 0.4rem 0;
+        }
+        
+        /* Esquema de imagen y cotas */
+        .image-scheme {
+            position: relative; width: 100%; max-width: 450px; height: 260px; margin: 2rem auto; background: #2a2522; border-radius: 20px 20px 20px 150px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05);
+        }
+        .image-scheme::before {
+            content: '';
+            position: absolute;
+            inset: 30px; 
+            border: 1px dashed rgba(255, 255, 255, 0.4);
+            pointer-events: none;
+            border-radius: 10px 10px 10px 120px;
+        }
+        .cota-line {
+            position: absolute;
+            background: var(--pink-2);
+            z-index: 10;
+        }
+        .cota-text {
+            position: absolute;
+            color: var(--pink-2);
+            font-size: 0.75rem;
+            font-family: var(--font-sans);
+            z-index: 10;
+            white-space: nowrap;
+        }
+        
+        /* Recursos de interfaz extendidos */
+        .ui-resource-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 12px;
+        }
+        .ui-resource-item-title {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+        
+        .texture-sample { width: 100%; height: 100px; background: repeating-linear-gradient(45deg, rgba(255,255,255,0.015), rgba(255,255,255,0.015) 1px, transparent 1px, transparent 4px); border-radius: 8px; margin-bottom: 0.5rem; }
+        
+        .header { display: none; }
+
+        /* Estilo para la imagen de portada */
+        .cover-image-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        .cover-image-container img {
+            max-width: 90%;
+            max-height: 400px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <!-- Portada (página 1) -->
+    <div class="page">
+        <section class="guide-section text-center" style="margin-top: 15%;">
+            <div class="logo" style="font-size: 2rem; margin-bottom: 2rem;">SEREZ <span class="logo-light">STUDIO</span></div>
+            <h1 class="hero-title" style="font-size: 3.5rem;">Brand Style Guide</h1>
+            <p class="tagline" style="margin-bottom: 2rem;">Erotic Massages, Serez Studio</p>
+            
+            <div class="cover-image-container">
+                <img src="assets/images/Recurso 3.png" alt="Serez Studio Concept">
+            </div>
+        </section>
+        <!-- Footer removido de la portada -->
+    </div>
+
+    <!-- Concepto creativo (página 2) -->
+    <div class="page">
+        <section class="guide-section">
+            <h2 class="section-title">Creative Concept</h2>
+            <p class="body-text"><strong>Elegant intimacy and conscious touch.</strong> The visual proposal is based on the capacity of touch to generate deep and transformative connections. Instead of resorting to explicit images, we seek to evoke sensations through a combination of a sober palette with pink accents that suggest warmth and sophistication.</p>
+            <p class="body-text">The use of serif and sans serif typography creates a clear hierarchy that guides the user, while generous spaces and asymmetrical composition recall the fluidity of the body. Subtle interaction, for example, the hover effect of buttons and the entrance animation of components, reinforces the idea of delicacy and dynamism.</p>
+            <p class="body-text">Furthermore, we incorporate light textures and decorative elements that recall the delicacy of fabric and skin, without falling into vulgarity. This combination transmits wellness, discovery, and curiosity.</p>
+            
+            <!-- Imágenes referenciales (Sensuales, tacto, piel, sombras) -->
+            <div class="concept-references">
+                <img src="assets/brand/ref1.jpg" alt="Sensuality and curves" class="concept-img">
+                <img src="assets/brand/ref2.jpg" alt="Elegance and skin" class="concept-img">
+                <img src="assets/brand/ref3.jpg" alt="Intimate touch" class="concept-img">
+            </div>
+        </section>
+        <footer class="page-number">Page 2</footer>
+    </div>
+
+    <!-- Color Palettees (página 3) -->
+    <div class="page">
+        <section class="guide-section">
+            <h2 class="section-title">Color Palette</h2>
+            <p class="body-text">The palette combines dark and neutral tones with pink accents to generate contrast, warmth, and elegance. The colors of the landing page are used as a base and two dark pinks extracted from the brand visual references are added.</p>
+            <div class="color-grid" style="display:grid;grid-template-columns:repeat(3, 1fr);gap:20px; margin-top:2rem;">
+                <div>
+                    <div class="color-swatch" style="background-color: var(--bg-main);"></div>
+                    <div class="color-label">Background Main</div>
+                    <div class="color-hex">#141211</div>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background-color: var(--bg-darker);"></div>
+                    <div class="color-label">Background Darker</div>
+                    <div class="color-hex">#0d0c0b</div>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background-color: var(--accent);"></div>
+                    <div class="color-label">Accent (Base)</div>
+                    <div class="color-hex">#D9C5B2</div>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background-color: var(--pink-1);"></div>
+                    <div class="color-label">Pink Accent 1</div>
+                    <div class="color-hex">#d4b9b2</div>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background-color: var(--pink-2);"></div>
+                    <div class="color-label">Pink Accent 2 (CTA)</div>
+                    <div class="color-hex">#c29669</div>
+                </div>
+                <div>
+                    <div class="color-swatch" style="background-color: var(--text-main);"></div>
+                    <div class="color-label">Text Main</div>
+                    <div class="color-hex">#F4F1EA</div>
+                </div>
+            </div>
+        </section>
+        <footer class="page-number">Page 3</footer>
+    </div>
+
+    <!-- Typography System (página 4) -->
+    <div class="page">
+        <section class="guide-section">
+            <h2 class="section-title">Typography System</h2>
+            <p class="body-text">The contrast between the classic elegance of Playfair Display for titles and the modern cleanliness of Inter for body text reflects the balance between tradition and contemporaneity.</p>
+            
+            <div class="typo-example" style="margin-top: 2rem;">
+                <h1 style="font-family: var(--font-serif); font-size: 3.5rem; color: var(--pink-2); font-weight: 400; margin-bottom: 0.2rem;">Heading H1 – Playfair Display</h1>
+                <p class="body-text">Used for main headers and high-impact messages. Projects sophistication.</p>
+            </div>
+            
+            <div class="typo-example">
+                <h2 style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--pink-2); font-weight: 400; margin-bottom: 0.2rem;">Heading H2 – Playfair Display</h2>
+                <p class="body-text">Ideal for separating large blocks of content and marking key sections.</p>
+            </div>
+            
+            <div class="typo-example">
+                <h3 style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--pink-2); font-weight: 400; margin-bottom: 0.2rem;">Subheadings H3 – Playfair Display</h3>
+                <p class="body-text">Secondary hierarchy for feature or service cards.</p>
+            </div>
+
+            <div class="typo-example">
+                <p style="font-family: var(--font-sans); font-size: 1.125rem; color: var(--pink-2); font-weight: 400; margin-bottom: 0.2rem;">Body Text - Inter Regular</p>
+                <p class="body-text">Reading should be comfortable, so we use generous line spacing and soft colors to avoid visual fatigue.</p>
+            </div>
+            
+            <div class="typo-example">
+                <p style="font-family: var(--font-sans); font-size: 0.9rem; color: var(--pink-2); font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.2rem;">Labels and CTA - Inter Medium</p>
+                <p class="body-text">In uppercase, with wide spacing, used in buttons, small labels, and categories to give a visual break.</p>
+            </div>
+        </section>
+        <footer class="page-number">Page 4</footer>
+    </div>
+
+    <!-- Image Treatment (página 5) -->
+    <div class="page">
+        <section class="guide-section">
+            <h2 class="section-title">Image Treatment</h2>
+            <p class="body-text">Photographic direction is essential to convey the "dark editorial" concept. Images should focus on details, skin texture, penumbra, and suggestive lighting, avoiding obvious or overly lit framing.</p>
+            <p class="body-text">In the interface, photographs are presented within containers with asymmetrical rounded borders, for example, applying a pronounced radius on a single corner (such as 150px to 200px) to break grid rigidity and provide organic fluidity. It is always recommended to apply a subtle gradient overlay to ensure the legibility of superimposed text.</p>
+            
+            <div class="image-scheme">
+                <!-- Cota Top Padding -->
+                <div class="cota-line" style="top: 0; left: 50%; width: 1px; height: 30px;"></div>
+                <div class="cota-text" style="top: 8px; left: calc(50% + 10px);">Internal Padding 30px</div>
+                
+                <!-- Cota Left Padding -->
+                <div class="cota-line" style="top: 50%; left: 0; width: 30px; height: 1px;"></div>
+                <div class="cota-text" style="top: calc(50% - 15px); left: 35px;">30px</div>
+                
+                <!-- Cota Border Radius -->
+                <div class="cota-text" style="bottom: 80px; right: 40px; background: rgba(42,37,34,0.8); padding: 2px 6px; border-radius: 4px;">Asymmetrical radius: 150px</div>
+                <div class="cota-line" style="bottom: 88px; right: 20px; width: 18px; height: 1px;"></div>
+                
+                <!-- Texto Central -->
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: rgba(255,255,255,0.4); font-size: 1.2rem; font-family: var(--font-serif); text-align: center;">
+                    Safe area of the image<br>
+                    <span style="font-size: 0.8rem; font-family: var(--font-sans);">+ Gradient Overlay</span>
+                </div>
+            </div>
+            
+            <p class="body-text">The scheme details the framing of the images. Constant padding creates an elegant "air", while the asymmetrical bottom right radius projects dynamism.</p>
+        </section>
+        <footer class="page-number">Page 5</footer>
+    </div>
+
+    <!-- Graphic Style (página 6) -->
+    <div class="page">
+        <section class="guide-section">
+            <h2 class="section-title">Graphic Style</h2>
+            <p class="body-text">The graphic style is built around three pillars: fluid composition, discreet resources, and textures that evoke intimacy and touch.</p>
+            
+            <!-- Composición -->
+            <div class="ui-resource-item" style="margin-bottom: 1.5rem;">
+                <h3 class="ui-resource-item-title">1. Composition</h3>
+                <p class="body-text" style="font-size: 0.95rem; margin-bottom: 0;"><strong>Organic Flow:</strong> Pages avoid traditional rigidity using staggered blocks, large margins (air), and controlled asymmetry. This reflects the fluidity of a sensual movement and avoids the sensation of a corporate or static interface.</p>
+            </div>
+
+            <!-- Texturas -->
+            <div class="ui-resource-item" style="margin-bottom: 1.5rem;">
+                <h3 class="ui-resource-item-title">2. Textures</h3>
+                <p class="body-text" style="font-size: 0.95rem;">The "skin" of the site. We apply patterns with 2% to 4% opacity to add elegant visual noise, eliminating the coldness of flat backgrounds and bringing the digital closer to physical tactile perception.</p>
+                <div class="texture-sample" style="height: 60px; margin-top: 1rem;"></div>
+            </div>
+
+            <!-- Recursos -->
+            <div class="ui-resource-item" style="margin-bottom: 1.5rem;">
+                <h3 class="ui-resource-item-title">3. Resources</h3>
+                <p class="body-text" style="font-size: 0.95rem;">Subliminal interface elements designed to structure, accompany, and guide the user smoothly.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 1rem; align-items: center;">
+                    <div>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">Lines (5% opacity)</p>
+                        <div style="width: 120px; height: 1px; background: rgba(255,255,255,0.08);"></div>
+                    </div>
+                    <div>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">Circular Adornment</p>
+                        <div style="width: 40px; height: 40px; border: 1px solid var(--accent); border-radius: 50%; opacity: 0.3;"></div>
+                    </div>
+                    <div>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">Capsule Button</p>
+                        <div style="padding: 0.5rem 1.2rem; border: 1px solid var(--pink-2); color: var(--pink-2); border-radius: 50px; font-family: var(--font-sans); font-size: 0.7rem; font-weight: 500; text-transform: uppercase;">Interaction</div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <footer class="page-number">Page 6</footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

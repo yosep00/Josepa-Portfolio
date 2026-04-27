@@ -1,0 +1,638 @@
+{
+  "designSystem": {
+    "name": "Serez Studio - Landing Page Components",
+    "version": "1.0",
+    "container": {
+      "maxWidth": "1440px",
+      "paddingX": "5%"
+    }
+  },
+
+  "colors": {
+    "backgroundMain": "#141211",
+    "backgroundDarker": "#0d0c0b",
+    "textMain": "#F4F1EA",
+    "textMuted": "#B3AAA1",
+    "accent": "#D9C5B2",
+    "accentHover": "#c4ae97",
+    "imageFallback": "#2a2522"
+  },
+
+  "typography": {
+    "fonts": {
+      "serif": "Playfair Display",
+      "sans": "Inter"
+    },
+    "styles": {
+      "h1_hero": {
+        "font": "Playfair Display",
+        "size": 72,
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#F4F1EA",
+        "marginBottom": 24
+      },
+      "h2_section": {
+        "font": "Playfair Display",
+        "size": 48,
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#F4F1EA",
+        "marginBottom": 32
+      },
+      "h3_card": {
+        "font": "Playfair Display",
+        "size": 24,
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#F4F1EA",
+        "marginBottom": 16
+      },
+      "h1_cta": {
+        "font": "Playfair Display",
+        "size": 64,
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#F4F1EA",
+        "marginBottom": 24
+      },
+      "body_large": {
+        "font": "Inter",
+        "size": 20,
+        "weight": 400,
+        "lineHeight": 1.6,
+        "color": "#B3AAA1",
+        "marginBottom": 24
+      },
+      "body": {
+        "font": "Inter",
+        "size": 18,
+        "weight": 400,
+        "lineHeight": 1.6,
+        "color": "#B3AAA1",
+        "marginBottom": 24
+      },
+      "body_small": {
+        "font": "Inter",
+        "size": 16,
+        "weight": 400,
+        "lineHeight": 1.6,
+        "color": "#B3AAA1"
+      },
+      "tagline": {
+        "font": "Inter",
+        "size": 13,
+        "weight": "400-500",
+        "letterSpacing": 2,
+        "textTransform": "uppercase",
+        "color": "#D9C5B2",
+        "marginBottom": 24
+      },
+      "nav_link": {
+        "font": "Inter",
+        "size": 14,
+        "weight": 400,
+        "lineHeight": 1,
+        "color": "#F4F1EA"
+      },
+      "button": {
+        "font": "Inter",
+        "size": 14,
+        "weight": 500,
+        "letterSpacing": 0.5,
+        "textTransform": "uppercase"
+      },
+      "button_large": {
+        "font": "Inter",
+        "size": 16,
+        "weight": 500,
+        "letterSpacing": 0.5,
+        "textTransform": "uppercase"
+      },
+      "logo": {
+        "font": "Inter",
+        "size": 20,
+        "weight": 600,
+        "letterSpacing": 1
+      },
+      "feature_number": {
+        "font": "Playfair Display",
+        "size": 48,
+        "weight": 400,
+        "lineHeight": 1,
+        "color": "#D9C5B2",
+        "opacity": 0.5,
+        "marginBottom": 16
+      }
+    }
+  },
+
+  "effects": {
+    "shadow_card": {
+      "value": "0 10px 20px rgba(217, 197, 178, 0.1)",
+      "usage": "Button hover"
+    },
+    "border_card": {
+      "value": "1px solid rgba(255,255,255,0.05)",
+      "usage": "Card borders"
+    },
+    "border_card_hover": {
+      "value": "1px solid rgba(217, 197, 178, 0.3)",
+      "usage": "Card hover"
+    },
+    "overlay_cta": {
+      "value": "rgba(20, 18, 17, 0.85)",
+      "usage": "Final CTA overlay"
+    },
+    "bg_card": {
+      "value": "rgba(255,255,255,0.02)",
+      "usage": "Card backgrounds"
+    },
+    "blur_header": {
+      "value": "blur(10px)",
+      "usage": "Header scrolled"
+    }
+  },
+
+  "atoms": {
+    "button_primary": {
+      "name": "Button / Primary",
+      "description": "Botón primario principal",
+      "states": {
+        "default": {
+          "background": "#D9C5B2",
+          "color": "#141211",
+          "border": "1px solid #D9C5B2"
+        },
+        "hover": {
+          "background": "transparent",
+          "color": "#D9C5B2",
+          "border": "1px solid #D9C5B2",
+          "transform": "translateY(-3px)",
+          "shadow": "0 10px 20px rgba(217, 197, 178, 0.1)"
+        },
+        "pressed": {
+          "background": "transparent",
+          "color": "#D9C5B2",
+          "border": "1px solid #D9C5B2"
+        },
+        "disabled": {
+          "opacity": 0.5
+        }
+      },
+      "variants": {
+        "default": {
+          "padding": "16px 40px",
+          "fontSize": 14,
+          "borderRadius": 50
+        },
+        "large": {
+          "padding": "20px 56px",
+          "fontSize": 16,
+          "borderRadius": 50
+        }
+      },
+      "usage": ["Hero: ¡COMENCEMOS!", "Final CTA: ACCEDER A LA MASTERCLASS"]
+    },
+
+    "tagline": {
+      "name": "Text / Tagline",
+      "description": "Etiqueta uppercase pequeña",
+      "style": {
+        "font": "Inter",
+        "size": 13,
+        "weight": 500,
+        "letterSpacing": 2,
+        "textTransform": "uppercase",
+        "color": "#D9C5B2"
+      },
+      "usage": ["Hero: MASTERCLASS EXCLUSIVA", "Experience: UNA INVITACIÓN AL DESEO", "Expert: TU GUÍA EN ESTE VIAJE"]
+    },
+
+    "title_h1_hero": {
+      "name": "Title / H1 - Hero",
+      "description": "Título principal del Hero",
+      "style": {
+        "font": "Playfair Display",
+        "size": 72,
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#F4F1EA"
+      },
+      "usage": ["Hero Section: Despierta una conexión que trasciende la piel."]
+    },
+
+    "title_h2_section": {
+      "name": "Title / H2 - Section",
+      "description": "Título de secciones",
+      "style": {
+        "font": "Playfair Display",
+        "size": 48,
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#F4F1EA"
+      },
+      "usage": ["Features: Un Viaje Hacia lo Desconocido", "Experience: El Arte de Sentir y Conectar", "Expert: Manuela Escobar", "Final CTA: ¿Estás lista para transformar tus encuentros?"]
+    },
+
+    "title_h3_card": {
+      "name": "Title / H3 - Card",
+      "description": "Título de tarjetas",
+      "style": {
+        "font": "Playfair Display",
+        "size": 24,
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#F4F1EA"
+      },
+      "usage": ["Feature Cards"]
+    },
+
+    "title_cta": {
+      "name": "Title / CTA - Final",
+      "description": "Título del CTA final",
+      "style": {
+        "font": "Playfair Display",
+        "size": 64,
+        "weight": 400,
+        "lineHeight": 1.2,
+        "color": "#F4F1EA"
+      },
+      "usage": ["Final CTA Section"]
+    },
+
+    "paragraph_body_large": {
+      "name": "Text / Body - Large",
+      "description": "Párrafo grande (hero subtitle)",
+      "style": {
+        "font": "Inter",
+        "size": 20,
+        "weight": 400,
+        "lineHeight": 1.6,
+        "color": "#B3AAA1"
+      },
+      "usage": ["Hero Subtitle", "Final CTA Subtitle"]
+    },
+
+    "paragraph_body": {
+      "name": "Text / Body",
+      "description": "Párrafo estándar",
+      "style": {
+        "font": "Inter",
+        "size": 18,
+        "weight": 400,
+        "lineHeight": 1.6,
+        "color": "#B3AAA1"
+      },
+      "usage": ["Experience Text", "Expert Text"]
+    },
+
+    "paragraph_body_small": {
+      "name": "Text / Body - Small",
+      "description": "Párrafo pequeño (tarjetas)",
+      "style": {
+        "font": "Inter",
+        "size": 16,
+        "weight": 400,
+        "lineHeight": 1.6,
+        "color": "#B3AAA1"
+      },
+      "usage": ["Feature Cards"]
+    },
+
+    "feature_number": {
+      "name": "Text / Feature Number",
+      "description": "Número de feature card",
+      "style": {
+        "font": "Playfair Display",
+        "size": 48,
+        "weight": 400,
+        "lineHeight": 1,
+        "color": "#D9C5B2",
+        "opacity": 0.5
+      },
+      "usage": ["Feature Cards: 01, 02, 03"]
+    },
+
+    "logo": {
+      "name": "Logo / Brand",
+      "description": "Logo de la marca",
+      "style": {
+        "font": "Inter",
+        "size": 20,
+        "weight": 600,
+        "letterSpacing": 1,
+        "color": "#F4F1EA"
+      },
+      "parts": {
+        "brand": {
+          "text": "SEREZ",
+          "weight": 600,
+          "color": "#F4F1EA"
+        },
+        "studio": {
+          "text": "STUDIO",
+          "weight": 300,
+          "color": "#B3AAA1"
+        }
+      },
+      "usage": ["Header/Navbar"]
+    },
+
+    "nav_link": {
+      "name": "Link / Navigation",
+      "description": "Link de navegación",
+      "states": {
+        "default": {
+          "color": "#F4F1EA",
+          "fontSize": 14
+        },
+        "hover": {
+          "color": "#D9C5B2"
+        }
+      },
+      "usage": ["Header: La Experta, El Viaje"]
+    },
+
+    "image_container": {
+      "name": "Image / Container",
+      "description": "Contenedor de imágenes",
+      "style": {
+        "background": "#2a2522",
+        "overflow": "hidden"
+      },
+      "variants": {
+        "hero": {
+          "borderRadius": "20px 20px 20px 200px"
+        },
+        "experience": {
+          "borderRadius": "20px 100px 20px 20px"
+        },
+        "expert": {
+          "borderRadius": "200px 20px 20px 20px"
+        },
+        "banner": {
+          "height": "60vh",
+          "imageHeight": "120%"
+        }
+      },
+      "usage": ["Hero Image", "Experience Image", "Expert Image", "Banner Parallax"]
+    },
+
+    "decorative_circle": {
+      "name": "Decor / Circle",
+      "description": "Elemento decorativo circular",
+      "style": {
+        "width": 200,
+        "height": 200,
+        "border": "1px solid #D9C5B2",
+        "borderRadius": "50%",
+        "opacity": 0.3
+      },
+      "usage": ["Hero - detrás de imagen"]
+    }
+  },
+
+  "molecules": {
+    "navbar": {
+      "name": "Navbar",
+      "description": "Barra de navegación",
+      "composition": ["Logo", "Nav Link x2"],
+      "style": {
+        "position": "fixed",
+        "top": 0,
+        "padding": "24px 0",
+        "background": {
+          "default": "transparent",
+          "scrolled": "rgba(20, 18, 17, 0.95) + blur(10px)"
+        },
+        "border": {
+          "scrolled": "1px solid rgba(255,255,255,0.05)"
+        }
+      },
+      "usage": ["Header en todas las secciones"]
+    },
+
+    "feature_card": {
+      "name": "Card / Feature",
+      "description": "Tarjeta de beneficio",
+      "composition": ["Feature Number", "Title H3", "Paragraph Body Small"],
+      "style": {
+        "padding": "48px 32px",
+        "background": "rgba(255,255,255,0.02)",
+        "border": "1px solid rgba(255,255,255,0.05)",
+        "borderRadius": 12,
+        "transition": "transform 0.3s, border-color 0.3s"
+      },
+      "states": {
+        "default": {
+          "transform": "translateY(0)",
+          "border": "1px solid rgba(255,255,255,0.05)"
+        },
+        "hover": {
+          "transform": "translateY(-10px)",
+          "border": "1px solid rgba(217, 197, 178, 0.3)"
+        }
+      },
+      "usage": ["Features Section - 3 tarjetas"]
+    },
+
+    "hero_content_block": {
+      "name": "Block / Hero Content",
+      "description": "Bloque de contenido del Hero",
+      "composition": ["Tagline", "Title H1", "Paragraph Body Large", "Button Primary"],
+      "style": {
+        "maxWidth": "90%"
+      },
+      "usage": ["Hero Section - lado izquierdo"]
+    },
+
+    "hero_image_with_decor": {
+      "name": "Image / Hero - with Decor",
+      "description": "Imagen del Hero con elemento decorativo",
+      "composition": ["Image Container (Hero)", "Decorative Circle"],
+      "style": {
+        "height": "80vh",
+        "position": "relative"
+      },
+      "usage": ["Hero Section - lado derecho"]
+    },
+
+    "section_text_block": {
+      "name": "Block / Section Text",
+      "description": "Bloque de texto de sección",
+      "composition": ["Tagline", "Title H2", "Paragraph Body"],
+      "style": {
+        "padding": 40,
+        "background": "rgba(255,255,255,0.02)",
+        "border": "1px solid rgba(255,255,255,0.05)",
+        "borderRadius": 12,
+        "textAlign": "center"
+      },
+      "usage": ["Experience Section (texto)", "Expert Section (texto)"]
+    }
+  },
+
+  "organisms": {
+    "hero_section": {
+      "name": "Section / Hero",
+      "description": "Sección Hero completa",
+      "composition": ["Navbar", "Hero Content Block", "Hero Image with Decor"],
+      "style": {
+        "container": "1440px",
+        "grid": "1fr 1fr",
+        "gap": "4rem",
+        "minHeight": "100vh",
+        "paddingTop": 80,
+        "alignItems": "center"
+      }
+    },
+
+    "features_section": {
+      "name": "Section / Features",
+      "description": "Sección de beneficios",
+      "composition": ["Title H2 Section", "Feature Card x3 (grid)"],
+      "style": {
+        "padding": "100px 0",
+        "grid": "repeat(3, 1fr)",
+        "gap": "3rem",
+        "marginTop": "4rem"
+      }
+    },
+
+    "experience_section": {
+      "name": "Section / Experience",
+      "description": "Sección de experiencia",
+      "composition": ["Image Container (Experience)", "Section Text Block"],
+      "style": {
+        "padding": "100px 0",
+        "grid": "1fr 1fr",
+        "gap": "4rem"
+      }
+    },
+
+    "banner_parallax": {
+      "name": "Section / Banner Parallax",
+      "description": "Banner de transición parallax",
+      "composition": ["Image Container (Banner)", "Banner Overlay Gradient"],
+      "style": {
+        "height": "60vh",
+        "imageHeight": "120%"
+      },
+      "overlay": "linear-gradient(to bottom, #141211 0%, transparent 50%, #0d0c0b 100%)"
+    },
+
+    "expert_section": {
+      "name": "Section / Expert",
+      "description": "Sección sobre la experta",
+      "composition": ["Image Container (Expert)", "Section Text Block"],
+      "style": {
+        "padding": "100px 0",
+        "grid": "1fr 1fr",
+        "gap": "5rem",
+        "background": "#0d0c0b"
+      }
+    },
+
+    "final_cta": {
+      "name": "Section / CTA - Final",
+      "description": "CTA final",
+      "composition": ["Parallax Background", "CTA Overlay", "Title CTA", "Paragraph Body Large", "Button Large"],
+      "style": {
+        "padding": "150px 0",
+        "textAlign": "center"
+      },
+      "overlay": "rgba(20, 18, 17, 0.85)"
+    },
+
+    "footer": {
+      "name": "Footer",
+      "description": "Pie de página",
+      "composition": ["Copyright Text"],
+      "style": {
+        "padding": "32px 0",
+        "textAlign": "center",
+        "borderTop": "1px solid rgba(255,255,255,0.05)",
+        "color": "rgba(255,255,255,0.3)",
+        "fontSize": 14
+      }
+    }
+  },
+
+  "landing_page_structure": [
+    {
+      "order": 1,
+      "section": "Hero Section",
+      "elements": ["Navbar", "Hero Content Block", "Hero Image with Decor"],
+      "width": "1440px"
+    },
+    {
+      "order": 2,
+      "section": "Features Section",
+      "elements": ["Title: Un Viaje Hacia lo Desconocido", "Feature Card x3"],
+      "width": "1440px"
+    },
+    {
+      "order": 3,
+      "section": "Experience Section",
+      "elements": ["Image", "Text Block"],
+      "width": "1440px"
+    },
+    {
+      "order": 4,
+      "section": "Banner Parallax",
+      "elements": ["Image", "Overlay Gradient"],
+      "width": "Full"
+    },
+    {
+      "order": 5,
+      "section": "Expert Section",
+      "elements": ["Image", "Text Block: Manuela Escobar"],
+      "width": "1440px"
+    },
+    {
+      "order": 6,
+      "section": "Final CTA",
+      "elements": ["Background", "Overlay", "Title", "Subtitle", "Button Large"],
+      "width": "1440px"
+    },
+    {
+      "order": 7,
+      "section": "Footer",
+      "elements": ["Copyright"],
+      "width": "1440px"
+    }
+  ],
+
+  "responsive": {
+    "tablet": {
+      "maxWidth": "1024px",
+      "changes": {
+        "heroTitle": "56px",
+        "gridGap": "2rem",
+        "heroImageHeight": "60vh"
+      }
+    },
+    "mobile": {
+      "maxWidth": "768px",
+      "changes": {
+        "heroGrid": "1 columna",
+        "featuresGrid": "1 columna",
+        "experienceGrid": "1 columna",
+        "expertGrid": "1 columna",
+        "heroTitle": "2.5rem"
+      }
+    }
+  },
+
+  "construction_order": [
+    "Fase 1: Colors (6 colors)",
+    "Fase 2: Typography (11 text styles)",
+    "Fase 3: Effects (shadows, borders, overlays)",
+    "Fase 4: Atoms (9 components)",
+    "Fase 5: Molecules (5 components)",
+    "Fase 6: Organisms (7 sections)",
+    "Fase 7: Landing Page Assembly",
+    "Fase 8: Interactions (prototype)"
+  ]
+}
